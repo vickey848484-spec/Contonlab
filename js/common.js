@@ -50,7 +50,7 @@
 
   const LEVELS = [
     { key: 'entry',  code: 0, name: '听唔明仔',     short: '入门', cls: 'level-entry' },
-    { key: 'mid',    code: 1, name: '识少少扮代表', short: '进阶', cls: 'level-mid'   },
+    { key: 'mid',    code: 1, name: '識少少扮代表', short: '进阶', cls: 'level-mid'   },
     { key: 'high',   code: 2, name: '嘴替本替',     short: '高阶', cls: 'level-high'  },
   ];
   function getLevelByScore(score, total) {
@@ -104,15 +104,14 @@
       { key: 'test',    label: '测一测', href: 'test.html' },
       { key: 'partner', label: '找语伴', href: 'partner.html' },
       { key: 'course',  label: '选课',   href: 'course.html' },
-      { key: 'invite',  label: '邀请',   href: 'invite.html' },
       { key: 'qa',      label: 'Q&A',   href: 'qa.html' },
-      { key: 'research',label: '调研',   href: 'research.html' },
+      { key: 'about',   label: '关于我', href: 'about.html' },
     ];
     const bar = document.createElement('div');
     bar.className = 'topbar';
     bar.innerHTML = `
       <div class="topbar-inner">
-        <a class="logo" href="index.html"><span class="pink">识</span>讲粤语</a>
+        <a class="logo" href="index.html"><span class="pink" style="font-size: 30px;">識</span><span style="font-size: 22px;">讲粤语</span></a>
         <nav class="row topbar-nav" style="gap:4px;">
           ${items.map(it => `
             <a href="${it.href}" class="topbar-link ${active === it.key ? 'is-active' : ''}">${it.label}</a>
