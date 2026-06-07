@@ -1,213 +1,501 @@
 {
   "dimensions": {
     "speed": {
-      "S": "速成型",
-      "M": "慢热型"
+      "S": {
+        "zh-HK": "速成型",
+        "zh-CN": "速成型",
+        "en": "Speed type"
+      },
+      "M": {
+        "zh-HK": "慢熱型",
+        "zh-CN": "慢热型",
+        "en": "Slow-burn type"
+      }
     },
     "learn": {
-      "P": "听讲型",
-      "T": "倾偈型"
+      "P": {
+        "zh-HK": "聽講型",
+        "zh-CN": "听讲型",
+        "en": "Listening type"
+      },
+      "T": {
+        "zh-HK": "傾偈型",
+        "zh-CN": "倾偈型",
+        "en": "Chatting type"
+      }
     },
     "social": {
-      "S": "社交型",
-      "E": "独狼型"
+      "S": {
+        "zh-HK": "社交型",
+        "zh-CN": "社交型",
+        "en": "Social type"
+      },
+      "E": {
+        "zh-HK": "獨狼型",
+        "zh-CN": "独狼型",
+        "en": "Lone wolf"
+      }
     },
     "style": {
-      "I": "学院派",
-      "W": "野生派"
+      "I": {
+        "zh-HK": "學院派",
+        "zh-CN": "学院派",
+        "en": "Academic"
+      },
+      "W": {
+        "zh-HK": "野生派",
+        "zh-CN": "野生派",
+        "en": "Wild"
+      }
     }
   },
   "types": {
     "SPTI": {
-      "title": "速成·听讲·社交·学院派",
-      "tagline": "效率卷王 / 社牛学院派",
-      "desc": "你学东西是带 deadline 的。听懂了规则立刻就要用，用完还要找人讲。粤语在你手里 3 个月能开挂。",
-      "advice": "推荐：拼音速成 + 场景口语 + 1v1 直播。别死磕语法，开口 > 一切。",
-      "matchTags": [
-        "速成",
-        "学院",
-        "社交"
-      ],
+      "title": {
+        "zh-HK": "速成·聽講·社交·學院派",
+        "zh-CN": "速成·听讲·社交·学院派",
+        "en": "Speed · Listening · Social · Academic"
+      },
+      "tagline": {
+        "zh-HK": "效率卷王 / 社牛學院派",
+        "zh-CN": "效率卷王 / 社牛学院派",
+        "en": "Efficiency grinder / Social Academic"
+      },
+      "desc": {
+        "zh-HK": "你學嘢係帶 deadline 嘅。聽明規則即刻要用，用完仲要搵人傾。廣東話喺你手 3 個月就能開掛。",
+        "zh-CN": "你学东西是带 deadline 的。听懂了规则立刻就要用，用完还要找人讲。粤语在你手里 3 个月能开挂。",
+        "en": "You learn with a deadline. Master a rule, use it instantly, then teach it to someone else. Cantonese in your hands can level up in 3 months."
+      },
+      "advice": {
+        "zh-HK": "推薦：拼音速成 + 場景口語 + 1 對 1 直播。唔好死磕文法，開口 > 一切。",
+        "zh-CN": "推荐：拼音速成 + 场景口语 + 1v1 直播。别死磕语法，开口 > 一切。",
+        "en": "Try: Pinyin crash course + real-life scenarios + 1-on-1 live. Skip grammar obsession — speaking beats everything."
+      },
+      "matchTags": {
+        "zh-HK": ["速成", "學院", "社交"],
+        "zh-CN": ["速成", "学院", "社交"],
+        "en": ["Speed", "Academic", "Social"]
+      },
       "icon": "ph-lightning"
     },
     "SPTE": {
-      "title": "速成·听讲·社交·野生派",
-      "tagline": "野生派 E 社交 / 玩梗达人",
-      "desc": "你不需要语法，你只需要笑点。听一句俚语能笑半天，下一秒就拿去跟人玩。",
-      "advice": "推荐：俚语大全 + 港剧拆解 + 语伴陪练。跟着本地人学就完事。",
-      "matchTags": [
-        "速成",
-        "野生",
-        "社交"
-      ],
+      "title": {
+        "zh-HK": "速成·聽講·社交·野生派",
+        "zh-CN": "速成·听讲·社交·野生派",
+        "en": "Speed · Listening · Social · Wild"
+      },
+      "tagline": {
+        "zh-HK": "野生社交 / 玩梗達人",
+        "zh-CN": "野生派 E 社交 / 玩梗达人",
+        "en": "Wild social type / Meme master"
+      },
+      "desc": {
+        "zh-HK": "你唔需要文法，你只需要笑點。聽一句俚語可以笑半日，下一秒就拎去同人玩。",
+        "zh-CN": "你不需要语法，你只需要笑点。听一句俚语能笑半天，下一秒就拿去跟人玩。",
+        "en": "You don't need grammar — you need punchlines. Hear a slang, laugh for an hour, use it on someone the next second."
+      },
+      "advice": {
+        "zh-HK": "推薦：俚語大全 + 港劇拆解 + 語伴陪練。跟住本地人學就搞掂。",
+        "zh-CN": "推荐：俚语大全 + 港剧拆解 + 语伴陪练。跟着本地人学就完事。",
+        "en": "Try: Slang pack + HK drama breakdown + partner practice. Just follow locals and you're set."
+      },
+      "matchTags": {
+        "zh-HK": ["速成", "野生", "社交"],
+        "zh-CN": ["速成", "野生", "社交"],
+        "en": ["Speed", "Wild", "Social"]
+      },
       "icon": "ph-microphone"
     },
     "SPWI": {
-      "title": "速成·听讲·独狼·学院派",
-      "tagline": "独狼卷王 / 自学天才",
-      "desc": "你一个人安静学能学 3 倍速，但要你开口比登天难。语法你门儿清，聊天就 GG。",
-      "advice": "推荐：拼音课 + 商务粤语 + 强迫自己每周找 1 位语伴练。",
-      "matchTags": [
-        "速成",
-        "学院",
-        "独狼"
-      ],
+      "title": {
+        "zh-HK": "速成·聽講·獨狼·學院派",
+        "zh-CN": "速成·听讲·独狼·学院派",
+        "en": "Speed · Listening · Lone wolf · Academic"
+      },
+      "tagline": {
+        "zh-HK": "獨狼卷王 / 自學天才",
+        "zh-CN": "独狼卷王 / 自学天才",
+        "en": "Solo grinder / Self-study genius"
+      },
+      "desc": {
+        "zh-HK": "你一個人靜靜學可以學 3 倍速，但要你開口就難過登天。文法你晒得清，傾偈就 GG。",
+        "zh-CN": "你一个人安静学能学 3 倍速，但要你开口比登天难。语法你门儿清，聊天就 GG。",
+        "en": "You learn 3x faster alone, but getting you to speak is harder than climbing a mountain. Grammar is crisp; chatting falls apart."
+      },
+      "advice": {
+        "zh-HK": "推薦：拼音課 + 商務廣東話 + 強迫自己每週搵 1 個語伴練。",
+        "zh-CN": "推荐：拼音课 + 商务粤语 + 强迫自己每周找 1 位语伴练。",
+        "en": "Try: Pinyin course + Business Cantonese + force yourself to find 1 partner per week."
+      },
+      "matchTags": {
+        "zh-HK": ["速成", "學院", "獨狼"],
+        "zh-CN": ["速成", "学院", "独狼"],
+        "en": ["Speed", "Academic", "Solo"]
+      },
       "icon": "ph-target"
     },
     "SPWE": {
-      "title": "速成·听讲·独狼·野生派",
-      "tagline": "野生独狼 / 默默成精",
-      "desc": "你刷 1000 条港剧就能自己总结出语法。但要你跟人对话会紧张到结巴。",
-      "advice": "推荐：看港剧 + 听播客 + 加入匿名社群练。",
-      "matchTags": [
-        "速成",
-        "野生",
-        "独狼"
-      ],
+      "title": {
+        "zh-HK": "速成·聽講·獨狼·野生派",
+        "zh-CN": "速成·听讲·独狼·野生派",
+        "en": "Speed · Listening · Lone wolf · Wild"
+      },
+      "tagline": {
+        "zh-HK": "野生獨狼 / 默默成精",
+        "zh-CN": "野生独狼 / 默默成精",
+        "en": "Wild lone wolf / Quietly leveling up"
+      },
+      "desc": {
+        "zh-HK": "你碌 1000 條港劇就可以自己總結出文法。但要你同人對話會緊張到黐線。",
+        "zh-CN": "你刷 1000 条港剧就能自己总结出语法。但要你跟人对话会紧张到结巴。",
+        "en": "Binge 1000 HK drama clips and you can derive grammar yourself. But ask you to talk to a real person and you freeze up."
+      },
+      "advice": {
+        "zh-HK": "推薦：睇港劇 + 聽 Podcast + 加入匿名社群練。",
+        "zh-CN": "推荐：看港剧 + 听播客 + 加入匿名社群练。",
+        "en": "Try: HK dramas + podcasts + anonymous community practice."
+      },
+      "matchTags": {
+        "zh-HK": ["速成", "野生", "獨狼"],
+        "zh-CN": ["速成", "野生", "独狼"],
+        "en": ["Speed", "Wild", "Solo"]
+      },
       "icon": "ph-brain"
     },
     "STTI": {
-      "title": "速成·倾偈·社交·学院派",
-      "tagline": "话痨学霸 / 社牛进阶版",
-      "desc": "你是那种还没学完就开始讲的人，错到笑场也敢讲。半年粤语能交到 10 个本地朋友。",
-      "advice": "推荐：场景口语 + 1v1 老师纠错 + 粤语角/线下聚会。",
-      "matchTags": [
-        "速成",
-        "学院",
-        "社交"
-      ],
+      "title": {
+        "zh-HK": "速成·傾偈·社交·學院派",
+        "zh-CN": "速成·倾偈·社交·学院派",
+        "en": "Speed · Chatting · Social · Academic"
+      },
+      "tagline": {
+        "zh-HK": "話癮學霸 / 社牛進階版",
+        "zh-CN": "话痨学霸 / 社牛进阶版",
+        "en": "Chatty nerd / Social-butterfly pro"
+      },
+      "desc": {
+        "zh-HK": "你係嗰啲未學完就開始講嘅人。錯到笑場都照講。半年廣東話可以識到 10 個本地朋友。",
+        "zh-CN": "你是那种还没学完就开始讲的人，错到笑场也敢讲。半年粤语能交到 10 个本地朋友。",
+        "en": "You're the one who starts speaking before finishing the lesson. Mistakes make you laugh; you still talk. 6 months in, you've got 10 local friends."
+      },
+      "advice": {
+        "zh-HK": "推薦：場景口語 + 1 對 1 老師糾錯 + 廣東話角／線下聚會。",
+        "zh-CN": "推荐：场景口语 + 1v1 老师纠错 + 粤语角/线下聚会。",
+        "en": "Try: Scenario speaking + 1-on-1 correction + Cantonese meetups."
+      },
+      "matchTags": {
+        "zh-HK": ["速成", "學院", "社交"],
+        "zh-CN": ["速成", "学院", "社交"],
+        "en": ["Speed", "Academic", "Social"]
+      },
       "icon": "ph-chat-circle-dots"
     },
     "STTE": {
-      "title": "速成·倾偈·社交·野生派",
-      "tagline": "野生话痨 / 气氛组",
-      "desc": "你不学语法也能跟香港大妈聊起来。「咩啊」「食咗未」就是你的全部技能，但很够用。",
-      "advice": "推荐：俚语大全 + 找本地语伴陪练 + 别花钱上课，社群里泡着就够。",
-      "matchTags": [
-        "速成",
-        "野生",
-        "社交"
-      ],
+      "title": {
+        "zh-HK": "速成·傾偈·社交·野生派",
+        "zh-CN": "速成·倾偈·社交·野生派",
+        "en": "Speed · Chatting · Social · Wild"
+      },
+      "tagline": {
+        "zh-HK": "野生話癮 / 氣氛組",
+        "zh-CN": "野生话痨 / 气氛组",
+        "en": "Wild chatterbox / Vibe crew"
+      },
+      "desc": {
+        "zh-HK": "你唔學文法都同到香港大媽傾起。「咩啊」「食咗未」就係你全部技能，但好夠用。",
+        "zh-CN": "你不学语法也能跟香港大妈聊起来。「咩啊」「食咗未」就是你的全部技能，但很够用。",
+        "en": "No grammar? You can still chat up an HK aunty. 「咩啊」「食咗未」 — that's your whole toolkit, and it works."
+      },
+      "advice": {
+        "zh-HK": "推薦：俚語大全 + 搵本地語伴陪練 + 唔好花錢上堂，社群里浸住就夠。",
+        "zh-CN": "推荐：俚语大全 + 找本地语伴陪练 + 别花钱上课，社群里泡着就够。",
+        "en": "Try: Slang pack + find a local partner + skip paid classes, just soak in the community."
+      },
+      "matchTags": {
+        "zh-HK": ["速成", "野生", "社交"],
+        "zh-CN": ["速成", "野生", "社交"],
+        "en": ["Speed", "Wild", "Social"]
+      },
       "icon": "ph-flame"
     },
     "STWI": {
-      "title": "速成·倾偈·独狼·学院派",
-      "tagline": "安静高手 / 反差萌",
-      "desc": "你一开口很惊艳（你默默练过），但你不主动找人对练。其实你应该多开口。",
-      "advice": "推荐：商务粤语 + 每周 1 次语伴 + 录自己说话回听纠错。",
-      "matchTags": [
-        "速成",
-        "学院",
-        "独狼"
-      ],
+      "title": {
+        "zh-HK": "速成·傾偈·獨狼·學院派",
+        "zh-CN": "速成·倾偈·独狼·学院派",
+        "en": "Speed · Chatting · Lone wolf · Academic"
+      },
+      "tagline": {
+        "zh-HK": "安靜高手 / 反差萌",
+        "zh-CN": "安静高手 / 反差萌",
+        "en": "Quiet pro / Hidden charm"
+      },
+      "desc": {
+        "zh-HK": "你一開口好驚艷（你默默練過），但你唔會主動搵人對練。其實你應該多開口。",
+        "zh-CN": "你一开口很惊艳（你默默练过），但你不主动找人对练。其实你应该多开口。",
+        "en": "When you do speak, it's impressive (you've practiced quietly). But you never seek practice. You should open up more."
+      },
+      "advice": {
+        "zh-HK": "推薦：商務廣東話 + 每週 1 次語伴 + 錄自己講嘢回聽糾錯。",
+        "zh-CN": "推荐：商务粤语 + 每周 1 次语伴 + 录自己说话回听纠错。",
+        "en": "Try: Business Cantonese + 1 partner/week + record yourself and review."
+      },
+      "matchTags": {
+        "zh-HK": ["速成", "學院", "獨狼"],
+        "zh-CN": ["速成", "学院", "独狼"],
+        "en": ["Speed", "Academic", "Solo"]
+      },
       "icon": "ph-fox"
     },
     "STWE": {
-      "title": "速成·倾偈·独狼·野生派",
-      "tagline": "野生独行侠 / 凭语感走路",
-      "desc": "你学粤语不翻书，全靠刷剧和听歌。听起来像本地人，但偶尔会蹦出奇怪的语法。",
-      "advice": "推荐：港剧 + 粤语歌 + 偶尔找语伴纠音。",
-      "matchTags": [
-        "速成",
-        "野生",
-        "独狼"
-      ],
+      "title": {
+        "zh-HK": "速成·傾偈·獨狼·野生派",
+        "zh-CN": "速成·倾偈·独狼·野生派",
+        "en": "Speed · Chatting · Lone wolf · Wild"
+      },
+      "tagline": {
+        "zh-HK": "野生獨行俠 / 憑語感行路",
+        "zh-CN": "野生独行侠 / 凭语感走路",
+        "en": "Wild lone ranger / Vibes-only"
+      },
+      "desc": {
+        "zh-HK": "你學廣東話唔睇書，全靠煲劇同聽歌。聽落似本地人，但間中會爆啲奇怪文法出嚟。",
+        "zh-CN": "你学粤语不翻书，全靠刷剧和听歌。听起来像本地人，但偶尔会蹦出奇怪的语法。",
+        "en": "No textbooks — just dramas and songs. You sound local, but sometimes weird grammar slips out."
+      },
+      "advice": {
+        "zh-HK": "推薦：港劇 + 廣東話歌 + 間中搵語伴糾音。",
+        "zh-CN": "推荐：港剧 + 粤语歌 + 偶尔找语伴纠音。",
+        "en": "Try: HK dramas + Cantopop + occasional partner for tone check."
+      },
+      "matchTags": {
+        "zh-HK": ["速成", "野生", "獨狼"],
+        "zh-CN": ["速成", "野生", "独狼"],
+        "en": ["Speed", "Wild", "Solo"]
+      },
       "icon": "ph-dice-five"
     },
     "MPTI": {
-      "title": "慢热·听讲·社交·学院派",
-      "tagline": "稳扎稳打 / 学习型社牛",
-      "desc": "你学东西不急，但一定要学懂。学懂了就敢讲，讲得还很标准。",
-      "advice": "推荐：系统课（拼音+句型+语法）+ 每月 1 次语伴复盘。",
-      "matchTags": [
-        "慢热",
-        "学院",
-        "社交"
-      ],
+      "title": {
+        "zh-HK": "慢熱·聽講·社交·學院派",
+        "zh-CN": "慢热·听讲·社交·学院派",
+        "en": "Slow-burn · Listening · Social · Academic"
+      },
+      "tagline": {
+        "zh-HK": "穩扎穩打 / 學習型社牛",
+        "zh-CN": "稳扎稳打 / 学习型社牛",
+        "en": "Steady player / Learning socialite"
+      },
+      "desc": {
+        "zh-HK": "你學嘢唔急，但一定要學明。學明咗就敢講，仲講得好標準。",
+        "zh-CN": "你学东西不急，但一定要学懂。学懂了就敢讲，讲得还很标准。",
+        "en": "You don't rush, but you master it. Once you understand, you speak — and you sound textbook."
+      },
+      "advice": {
+        "zh-HK": "推薦：系統課（拼音 + 句型 + 文法）+ 每月 1 次語伴覆盤。",
+        "zh-CN": "推荐：系统课（拼音+句型+语法）+ 每月 1 次语伴复盘。",
+        "en": "Try: Systematic course (pinyin + patterns + grammar) + monthly partner review."
+      },
+      "matchTags": {
+        "zh-HK": ["慢熱", "學院", "社交"],
+        "zh-CN": ["慢热", "学院", "社交"],
+        "en": ["Slow-burn", "Academic", "Social"]
+      },
       "icon": "ph-plant"
     },
     "MPTE": {
-      "title": "慢热·听讲·社交·野生派",
-      "tagline": "野生学习型 / 慢热但扎实",
-      "desc": "你不急，但你一开口大家就觉得你粤语很溜。你学东西没章法，但吸收得稳。",
-      "advice": "推荐：粤语播客 + 港剧 + 跟本地朋友慢慢混。",
-      "matchTags": [
-        "慢热",
-        "野生",
-        "社交"
-      ],
+      "title": {
+        "zh-HK": "慢熱·聽講·社交·野生派",
+        "zh-CN": "慢热·听讲·社交·野生派",
+        "en": "Slow-burn · Listening · Social · Wild"
+      },
+      "tagline": {
+        "zh-HK": "野生學習型 / 慢熱但扎實",
+        "zh-CN": "野生学习型 / 慢热但扎实",
+        "en": "Wild learner / Slow but solid"
+      },
+      "desc": {
+        "zh-HK": "你唔急，但你一開口大家就覺得你廣東話好溜。學嘢冇章法，但吸收得穩。",
+        "zh-CN": "你不急，但你一开口大家就觉得你粤语很溜。你学东西没章法，但吸收得稳。",
+        "en": "No rush, but when you speak, people go 'wow, your Cantonese is smooth'. You learn without a system — but you absorb steadily."
+      },
+      "advice": {
+        "zh-HK": "推薦：廣東話 Podcast + 港劇 + 同本地朋友慢慢混。",
+        "zh-CN": "推荐：粤语播客 + 港剧 + 跟本地朋友慢慢混。",
+        "en": "Try: Cantonese podcasts + HK dramas + hang out with locals slowly."
+      },
+      "matchTags": {
+        "zh-HK": ["慢熱", "野生", "社交"],
+        "zh-CN": ["慢热", "野生", "社交"],
+        "en": ["Slow-burn", "Wild", "Social"]
+      },
       "icon": "ph-coffee"
     },
     "MPWI": {
-      "title": "慢热·听讲·独狼·学院派",
-      "tagline": "孤独学者 / 慢工出细活",
-      "desc": "你学粤语像做研究，每个音每个词都搞得很清楚。进度慢但扎实，1 年后秒杀 80% 速成型。",
-      "advice": "推荐：教材式系统课 + 商务粤语 + 不要硬逼自己社交。",
-      "matchTags": [
-        "慢热",
-        "学院",
-        "独狼"
-      ],
+      "title": {
+        "zh-HK": "慢熱·聽講·獨狼·學院派",
+        "zh-CN": "慢热·听讲·独狼·学院派",
+        "en": "Slow-burn · Listening · Lone wolf · Academic"
+      },
+      "tagline": {
+        "zh-HK": "孤獨學者 / 慢工出細活",
+        "zh-CN": "孤独学者 / 慢工出细活",
+        "en": "Lone scholar / Slow craft, fine work"
+      },
+      "desc": {
+        "zh-HK": "你學廣東話似做研究，每個音每個詞都搞得好清。進度慢但扎實，1 年後秒殺 80% 速成型。",
+        "zh-CN": "你学粤语像做研究，每个音每个词都搞得很清楚。进度慢但扎实，1 年后秒杀 80% 速成型。",
+        "en": "You learn Cantonese like research — every tone, every word pinned down. Slow but solid; 1 year in you outpace 80% of speed learners."
+      },
+      "advice": {
+        "zh-HK": "推薦：教材式系統課 + 商務廣東話 + 唔好逼自己社交。",
+        "zh-CN": "推荐：教材式系统课 + 商务粤语 + 不要硬逼自己社交。",
+        "en": "Try: Textbook-style systematic course + Business Cantonese + don't force socializing."
+      },
+      "matchTags": {
+        "zh-HK": ["慢熱", "學院", "獨狼"],
+        "zh-CN": ["慢热", "学院", "独狼"],
+        "en": ["Slow-burn", "Academic", "Solo"]
+      },
       "icon": "ph-book-open"
     },
     "MPWE": {
-      "title": "慢热·听讲·独狼·野生派",
-      "tagline": "安静野生 / 慢热但有灵性",
-      "desc": "你不爱说话，但粤语越来越有味道。学得很慢但很稳，配得上「野生学霸」。",
-      "advice": "推荐：粤语歌 + 文学课 + 不强求输出。",
-      "matchTags": [
-        "慢热",
-        "野生",
-        "独狼"
-      ],
+      "title": {
+        "zh-HK": "慢熱·聽講·獨狼·野生派",
+        "zh-CN": "慢热·听讲·独狼·野生派",
+        "en": "Slow-burn · Listening · Lone wolf · Wild"
+      },
+      "tagline": {
+        "zh-HK": "安靜野生 / 慢熱但有靈性",
+        "zh-CN": "安静野生 / 慢热但有灵性",
+        "en": "Quiet wild / Slow-burn with soul"
+      },
+      "desc": {
+        "zh-HK": "你唔多嘢講，但廣東話越嚟越有味道。學得好慢但好穩，配得上「野生學霸」。",
+        "zh-CN": "你不爱说话，但粤语越来越有味道。学得很慢但很稳，配得上「野生学霸」。",
+        "en": "You don't talk much, but your Cantonese keeps getting tastier. Slow and steady — earning the title 'wild scholar'."
+      },
+      "advice": {
+        "zh-HK": "推薦：廣東話歌 + 文學課 + 唔強求輸出。",
+        "zh-CN": "推荐：粤语歌 + 文学课 + 不强求输出。",
+        "en": "Try: Cantopop + literature course + don't push output."
+      },
+      "matchTags": {
+        "zh-HK": ["慢熱", "野生", "獨狼"],
+        "zh-CN": ["慢热", "野生", "独狼"],
+        "en": ["Slow-burn", "Wild", "Solo"]
+      },
       "icon": "ph-moon"
     },
     "MTTI": {
-      "title": "慢热·倾偈·社交·学院派",
-      "tagline": "慢热话痨 / 厚积薄发",
-      "desc": "你慢热，但你一旦开口就是社交天花板。先观察一个月，再惊艳全场。",
-      "advice": "推荐：场景口语 + 1v1 课 + 加入需要时间融入的粤语社群。",
-      "matchTags": [
-        "慢热",
-        "学院",
-        "社交"
-      ],
+      "title": {
+        "zh-HK": "慢熱·傾偈·社交·學院派",
+        "zh-CN": "慢热·倾偈·社交·学院派",
+        "en": "Slow-burn · Chatting · Social · Academic"
+      },
+      "tagline": {
+        "zh-HK": "慢熱話癮 / 厚積薄發",
+        "zh-CN": "慢热话痨 / 厚积薄发",
+        "en": "Slow-burn chatterbox / Late bloomer"
+      },
+      "desc": {
+        "zh-HK": "你慢熱，但你一開口就係社交天花板。先觀察一個月，再驚艷全場。",
+        "zh-CN": "你慢热，但你一旦开口就是社交天花板。先观察一个月，再惊艳全场。",
+        "en": "Slow to warm up, but when you talk, you're the room's ceiling. A month of observation, then you wow everyone."
+      },
+      "advice": {
+        "zh-HK": "推薦：場景口語 + 1 對 1 課 + 加入需要時間融入嘅廣東話社群。",
+        "zh-CN": "推荐：场景口语 + 1v1 课 + 加入需要时间融入的粤语社群。",
+        "en": "Try: Scenario speaking + 1-on-1 + join a slow-burn Cantonese community."
+      },
+      "matchTags": {
+        "zh-HK": ["慢熱", "學院", "社交"],
+        "zh-CN": ["慢热", "学院", "社交"],
+        "en": ["Slow-burn", "Academic", "Social"]
+      },
       "icon": "ph-flower-lotus"
     },
     "MTTE": {
-      "title": "慢热·倾偈·社交·野生派",
-      "tagline": "野生慢热型 / 朋友型学员",
-      "desc": "你不学语法，你学「人」。交几个本地朋友，自然就会说了。半年后比多数速成型都溜。",
-      "advice": "推荐：找语伴 + 粤语角 + 别花钱上课。",
-      "matchTags": [
-        "慢热",
-        "野生",
-        "社交"
-      ],
+      "title": {
+        "zh-HK": "慢熱·傾偈·社交·野生派",
+        "zh-CN": "慢热·倾偈·社交·野生派",
+        "en": "Slow-burn · Chatting · Social · Wild"
+      },
+      "tagline": {
+        "zh-HK": "野生慢熱型 / 朋友型學員",
+        "zh-CN": "野生慢热型 / 朋友型学员",
+        "en": "Wild slow-burn / Friend-type learner"
+      },
+      "desc": {
+        "zh-HK": "你唔學文法，你學「人」。識幾個本地朋友，自然就識講。半年後比多數速成型都溜。",
+        "zh-CN": "你不学语法，你学「人」。交几个本地朋友，自然就会说了。半年后比多数速成型都溜。",
+        "en": "No grammar — just people. Make a few local friends, and the language follows. 6 months later you're smoother than most speed learners."
+      },
+      "advice": {
+        "zh-HK": "推薦：搵語伴 + 廣東話角 + 唔好花錢上堂。",
+        "zh-CN": "推荐：找语伴 + 粤语角 + 别花钱上课。",
+        "en": "Try: Find a partner + Cantonese corner + skip paid classes."
+      },
+      "matchTags": {
+        "zh-HK": ["慢熱", "野生", "社交"],
+        "zh-CN": ["慢热", "野生", "社交"],
+        "en": ["Slow-burn", "Wild", "Social"]
+      },
       "icon": "ph-flower"
     },
     "MTWI": {
-      "title": "慢热·倾偈·独狼·学院派",
-      "tagline": "独行思考者 / 慢工出细活",
-      "desc": "你学一门语言要做 5 年规划。但你一旦说出来，每句都是经典。",
-      "advice": "推荐：长期系统课 + 商务/文学方向 + 跟一位老师慢慢磨。",
-      "matchTags": [
-        "慢热",
-        "学院",
-        "独狼"
-      ],
+      "title": {
+        "zh-HK": "慢熱·傾偈·獨狼·學院派",
+        "zh-CN": "慢热·倾偈·独狼·学院派",
+        "en": "Slow-burn · Chatting · Lone wolf · Academic"
+      },
+      "tagline": {
+        "zh-HK": "獨行思考者 / 慢工出細活",
+        "zh-CN": "独行思考者 / 慢工出细活",
+        "en": "Solo thinker / Slow craft, fine work"
+      },
+      "desc": {
+        "zh-HK": "你學一門語言要做 5 年規劃。但你一旦講出嚟，每句都係經典。",
+        "zh-CN": "你学一门语言要做 5 年规划。但你一旦说出来，每句都是经典。",
+        "en": "You plan language learning on a 5-year horizon. But when you do speak, every sentence is iconic."
+      },
+      "advice": {
+        "zh-HK": "推薦：長期系統課 + 商務／文學方向 + 同一位老師慢慢磨。",
+        "zh-CN": "推荐：长期系统课 + 商务/文学方向 + 跟一位老师慢慢磨。",
+        "en": "Try: Long-term systematic course + business / literature track + stick with one teacher."
+      },
+      "matchTags": {
+        "zh-HK": ["慢熱", "學院", "獨狼"],
+        "zh-CN": ["慢热", "学院", "独狼"],
+        "en": ["Slow-burn", "Academic", "Solo"]
+      },
       "icon": "ph-flame"
     },
     "MTWE": {
-      "title": "慢热·倾偈·独狼·野生派",
-      "tagline": "野生独行侠 / 慢热而深沉",
-      "desc": "你学粤语像在品茶。3 年后你和朋友去香港，能用粤语和出租车司机聊一晚上。",
-      "advice": "推荐：港剧 + 粤语歌 + 不强求进度，享受过程。",
-      "matchTags": [
-        "慢热",
-        "野生",
-        "独狼"
-      ],
+      "title": {
+        "zh-HK": "慢熱·傾偈·獨狼·野生派",
+        "zh-CN": "慢热·倾偈·独狼·野生派",
+        "en": "Slow-burn · Chatting · Lone wolf · Wild"
+      },
+      "tagline": {
+        "zh-HK": "野生獨行俠 / 慢熱而深沉",
+        "zh-CN": "野生独行侠 / 慢热而深沉",
+        "en": "Wild lone ranger / Slow-burn & deep"
+      },
+      "desc": {
+        "zh-HK": "你學廣東話似品茶。3 年後你同朋友去香港，可以用廣東話同的士司機傾一晚。",
+        "zh-CN": "你学粤语像在品茶。3 年后你和朋友去香港，能用粤语和出租车司机聊一晚上。",
+        "en": "You learn Cantonese like sipping tea. 3 years from now, you and a friend in HK can chat up a taxi driver all night — in Cantonese."
+      },
+      "advice": {
+        "zh-HK": "推薦：港劇 + 廣東話歌 + 唔強求進度，享受過程。",
+        "zh-CN": "推荐：港剧 + 粤语歌 + 不强求进度，享受过程。",
+        "en": "Try: HK dramas + Cantopop + don't push pace, enjoy the journey."
+      },
+      "matchTags": {
+        "zh-HK": ["慢熱", "野生", "獨狼"],
+        "zh-CN": ["慢热", "野生", "独狼"],
+        "en": ["Slow-burn", "Wild", "Solo"]
+      },
       "icon": "ph-leaf"
     }
   }

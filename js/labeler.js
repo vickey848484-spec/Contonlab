@@ -1,5 +1,5 @@
 /* ============================================================
- * labeler.js — 4 维 → 16 型
+ * labeler.js — 4 維 → 16 型
  * ============================================================ */
 (function (global) {
   'use strict';
@@ -20,11 +20,12 @@
   function dimensionsOf(code) {
     if (!DATA || !code) return [];
     const d = DATA.dimensions;
+    const pick = global.Cantonese.pick;
     return [
-      { key: 'speed',  label: d.speed[code[0]]  || code[0],  pole: code[0] },
-      { key: 'learn',  label: d.learn[code[1]]  || code[1],  pole: code[1] },
-      { key: 'social', label: d.social[code[2]] || code[2], pole: code[2] },
-      { key: 'style',  label: d.style[code[3]]  || code[3],  pole: code[3] },
+      { key: 'speed',  label: pick(d.speed[code[0]])  || code[0],  pole: code[0] },
+      { key: 'learn',  label: pick(d.learn[code[1]])  || code[1],  pole: code[1] },
+      { key: 'social', label: pick(d.social[code[2]]) || code[2], pole: code[2] },
+      { key: 'style',  label: pick(d.style[code[3]])  || code[3],  pole: code[3] },
     ];
   }
 

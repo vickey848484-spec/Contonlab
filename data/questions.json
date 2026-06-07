@@ -2,99 +2,869 @@
   "levelQuestions": [
     {
       "id": "q1",
-      "category": "听力",
-      "question": "「你食咗饭未啊？」是什么意思？",
-      "options": ["你吃饭了吗？", "你要去哪里？", "你在做什么？", "你认识吗？"],
-      "answer": 0
+      "category": {
+        "zh-HK": "句意",
+        "zh-CN": "句意",
+        "en": "Meaning"
+      },
+      "question": {
+        "zh-HK": "「你食咗飯未啊？」係咩意思？",
+        "zh-CN": "「你食咗饭未啊？」是什么意思？",
+        "en": "What does 「你食咗饭未啊？」 mean?"
+      },
+      "options": [
+        {
+          "zh-HK": "你去邊度？",
+          "zh-CN": "你要去哪里？",
+          "en": "Where are you going?"
+        },
+        {
+          "zh-HK": "你識唔識？",
+          "zh-CN": "你认识吗？",
+          "en": "Do you know (them)?"
+        },
+        {
+          "zh-HK": "你食咗飯未啊？",
+          "zh-CN": "你吃饭了吗？",
+          "en": "Have you eaten?"
+        },
+        {
+          "zh-HK": "你做緊咩？",
+          "zh-CN": "你在做什么？",
+          "en": "What are you doing?"
+        }
+      ],
+      "answer": 2
     },
     {
       "id": "q2",
-      "category": "词汇",
-      "question": "「咁」在粤语里最常是什么意思？",
-      "options": ["那么/这样", "怎么", "哪里", "什么"],
+      "category": {
+        "zh-HK": "詞彙",
+        "zh-CN": "词汇",
+        "en": "Vocabulary"
+      },
+      "question": {
+        "zh-HK": "「咁」喺廣東話入面最常係咩意思？",
+        "zh-CN": "「咁」在粤语里最常是什么意思？",
+        "en": "What does 「咁」 most commonly mean in Cantonese?"
+      },
+      "options": [
+        {
+          "zh-HK": "噉 / 咁樣",
+          "zh-CN": "那么/这样",
+          "en": "So / like this"
+        },
+        {
+          "zh-HK": "點",
+          "zh-CN": "怎么",
+          "en": "How"
+        },
+        {
+          "zh-HK": "邊度",
+          "zh-CN": "哪里",
+          "en": "Where"
+        },
+        {
+          "zh-HK": "乜嘢",
+          "zh-CN": "什么",
+          "en": "What"
+        }
+      ],
       "answer": 0
     },
     {
       "id": "q3",
-      "category": "句型",
-      "question": "「我哋一齐去」中的「一齐」是什么意思？",
-      "options": ["一起", "永远", "突然", "终于"],
-      "answer": 0
+      "category": {
+        "zh-HK": "句型",
+        "zh-CN": "句型",
+        "en": "Sentence pattern"
+      },
+      "question": {
+        "zh-HK": "「我哋一齊去」入面嘅「一齊」係咩意思？",
+        "zh-CN": "「我哋一齐去」中的「一齐」是什么意思？",
+        "en": "What does 「一齐」 mean in 「我哋一齐去」?"
+      },
+      "options": [
+        {
+          "zh-HK": "永遠",
+          "zh-CN": "永远",
+          "en": "Forever"
+        },
+        {
+          "zh-HK": "一齊",
+          "zh-CN": "一起",
+          "en": "Together"
+        },
+        {
+          "zh-HK": "突然",
+          "zh-CN": "突然",
+          "en": "Suddenly"
+        },
+        {
+          "zh-HK": "終於",
+          "zh-CN": "终于",
+          "en": "Finally"
+        }
+      ],
+      "answer": 1
     },
     {
       "id": "q4",
-      "category": "听力",
-      "question": "餐厅里服务员说「唔该晒」，通常表示？",
-      "options": ["谢谢（点完餐或结账后）", "你好（打招呼）", "请坐", "不好意思"],
-      "answer": 0
+      "category": {
+        "zh-HK": "句意",
+        "zh-CN": "句意",
+        "en": "Meaning"
+      },
+      "question": {
+        "zh-HK": "餐廳入面侍應講「唔該晒」，通常表示？",
+        "zh-CN": "餐厅里服务员说「唔该晒」，通常表示？",
+        "en": "In a restaurant, when the server says 「唔该晒」, what does it usually mean?"
+      },
+      "options": [
+        {
+          "zh-HK": "你好（打招呼）",
+          "zh-CN": "你好（打招呼）",
+          "en": "Hello (greeting)"
+        },
+        {
+          "zh-HK": "請坐",
+          "zh-CN": "请坐",
+          "en": "Please sit down"
+        },
+        {
+          "zh-HK": "唔好意思",
+          "zh-CN": "不好意思",
+          "en": "Sorry / Excuse me"
+        },
+        {
+          "zh-HK": "多謝（落完單或者結賬之後）",
+          "zh-CN": "谢谢（点完餐或结账后）",
+          "en": "Thank you (after ordering or paying)"
+        }
+      ],
+      "answer": 3
     },
     {
       "id": "q5",
-      "category": "词汇",
-      "question": "「食烟」在粤语里指？",
-      "options": ["抽烟", "吃饭", "喝酒", "吃零食"],
+      "category": {
+        "zh-HK": "詞彙",
+        "zh-CN": "词汇",
+        "en": "Vocabulary"
+      },
+      "question": {
+        "zh-HK": "「食煙」喺廣東話入面係指？",
+        "zh-CN": "「食烟」在粤语里指？",
+        "en": "What does 「食烟」 mean in Cantonese?"
+      },
+      "options": [
+        {
+          "zh-HK": "食煙",
+          "zh-CN": "抽烟",
+          "en": "Smoking"
+        },
+        {
+          "zh-HK": "食飯",
+          "zh-CN": "吃饭",
+          "en": "Eating a meal"
+        },
+        {
+          "zh-HK": "飲酒",
+          "zh-CN": "喝酒",
+          "en": "Drinking alcohol"
+        },
+        {
+          "zh-HK": "食零食",
+          "zh-CN": "吃零食",
+          "en": "Snacking"
+        }
+      ],
       "answer": 0
     },
     {
       "id": "q6",
-      "category": "俚语",
-      "question": "「老友记」在粤语里通常指？",
-      "options": ["老朋友/哥们", "老同学", "同事", "邻居"],
-      "answer": 0
+      "category": {
+        "zh-HK": "俚語",
+        "zh-CN": "俚语",
+        "en": "Slang"
+      },
+      "question": {
+        "zh-HK": "「老友記」喺廣東話入面通常指？",
+        "zh-CN": "「老友记」在粤语里通常指？",
+        "en": "In Cantonese, what does 「老友记」 usually refer to?"
+      },
+      "options": [
+        {
+          "zh-HK": "老同學",
+          "zh-CN": "老同学",
+          "en": "Old classmate"
+        },
+        {
+          "zh-HK": "同事",
+          "zh-CN": "同事",
+          "en": "Colleague"
+        },
+        {
+          "zh-HK": "老朋友 / 老友",
+          "zh-CN": "老朋友/哥们",
+          "en": "Old friend / buddy"
+        },
+        {
+          "zh-HK": "鄰居",
+          "zh-CN": "邻居",
+          "en": "Neighbor"
+        }
+      ],
+      "answer": 2
     },
     {
       "id": "q7",
-      "category": "俚语",
-      "question": "「食字」在粤语俚语里指？",
-      "options": ["玩谐音梗", "吃东西", "念字", "写错字"],
-      "answer": 0
+      "category": {
+        "zh-HK": "俚語",
+        "zh-CN": "俚语",
+        "en": "Slang"
+      },
+      "question": {
+        "zh-HK": "「食字」喺廣東話俚語入面指？",
+        "zh-CN": "「食字」在粤语俚语里指？",
+        "en": "What does 「食字」 mean in Cantonese slang?"
+      },
+      "options": [
+        {
+          "zh-HK": "食嘢",
+          "zh-CN": "吃东西",
+          "en": "Eating (food)"
+        },
+        {
+          "zh-HK": "讀字",
+          "zh-CN": "念字",
+          "en": "Reading a character"
+        },
+        {
+          "zh-HK": "寫錯字",
+          "zh-CN": "写错字",
+          "en": "Writing the wrong character"
+        },
+        {
+          "zh-HK": "玩食字",
+          "zh-CN": "玩谐音梗",
+          "en": "Playing with homophones"
+        }
+      ],
+      "answer": 3
     },
     {
       "id": "q8",
-      "category": "文化",
-      "question": "粤语「饮茶」主要指？",
-      "options": ["去茶楼喝早茶", "喝茶", "吃饭", "喝酒"],
-      "answer": 0
+      "category": {
+        "zh-HK": "文化",
+        "zh-CN": "文化",
+        "en": "Culture"
+      },
+      "question": {
+        "zh-HK": "廣東話「飲茶」主要指？",
+        "zh-CN": "粤语「饮茶」主要指？",
+        "en": "In Cantonese, what does 「饮茶」 mainly mean?"
+      },
+      "options": [
+        {
+          "zh-HK": "飲茶",
+          "zh-CN": "喝茶",
+          "en": "Drinking tea"
+        },
+        {
+          "zh-HK": "去茶樓飲早茶",
+          "zh-CN": "去茶楼喝早茶",
+          "en": "Going to a tea house for yum cha"
+        },
+        {
+          "zh-HK": "食飯",
+          "zh-CN": "吃饭",
+          "en": "Eating a meal"
+        },
+        {
+          "zh-HK": "飲酒",
+          "zh-CN": "喝酒",
+          "en": "Drinking alcohol"
+        }
+      ],
+      "answer": 1
     },
     {
       "id": "q9",
-      "category": "文化",
-      "question": "「恭喜发财，利是逗来」通常在什么场合说？",
-      "options": ["春节/拜年", "婚礼", "生日", "毕业"],
-      "answer": 0
+      "category": {
+        "zh-HK": "文化",
+        "zh-CN": "文化",
+        "en": "Culture"
+      },
+      "question": {
+        "zh-HK": "「恭喜發財，利是逗來」通常喺咩場合講？",
+        "zh-CN": "「恭喜发财，利是逗来」通常在什么场合说？",
+        "en": "When is 「恭喜发财，利是逗来」 usually said?"
+      },
+      "options": [
+        {
+          "zh-HK": "婚禮",
+          "zh-CN": "婚礼",
+          "en": "Wedding"
+        },
+        {
+          "zh-HK": "生日",
+          "zh-CN": "生日",
+          "en": "Birthday"
+        },
+        {
+          "zh-HK": "農曆新年 / 拜年",
+          "zh-CN": "春节/拜年",
+          "en": "Lunar New Year / 拜年"
+        },
+        {
+          "zh-HK": "畢業",
+          "zh-CN": "毕业",
+          "en": "Graduation"
+        }
+      ],
+      "answer": 2
     },
     {
       "id": "q10",
-      "category": "俚语",
-      "question": "「执生」在粤语里通常指？",
-      "options": ["临场应变/救场", "打扫卫生", "帮忙", "收拾东西"],
+      "category": {
+        "zh-HK": "俚語",
+        "zh-CN": "俚语",
+        "en": "Slang"
+      },
+      "question": {
+        "zh-HK": "「執生」喺廣東話入面通常指？",
+        "zh-CN": "「执生」在粤语里通常指？",
+        "en": "In Cantonese, what does 「执生」 usually mean?"
+      },
+      "options": [
+        {
+          "zh-HK": "臨場應變 / 救場",
+          "zh-CN": "临场应变/救场",
+          "en": "Improvising / saving the situation"
+        },
+        {
+          "zh-HK": "打掃衞生",
+          "zh-CN": "打扫卫生",
+          "en": "Cleaning up"
+        },
+        {
+          "zh-HK": "幫手",
+          "zh-CN": "帮忙",
+          "en": "Helping out"
+        },
+        {
+          "zh-HK": "執嘢",
+          "zh-CN": "收拾东西",
+          "en": "Tidying up"
+        }
+      ],
       "answer": 0
+    },
+    {
+      "id": "q11",
+      "category": {
+        "zh-HK": "拼音",
+        "zh-CN": "拼音",
+        "en": "Pinyin"
+      },
+      "question": {
+        "zh-HK": "「執」字嘅入聲韻尾係邊個？",
+        "zh-CN": "「执」字的入声韵尾是哪个？",
+        "en": "What's the entering-tone ending (入声) of 「执」?"
+      },
+      "options": [
+        {
+          "zh-HK": "-t（例：八 baat3）",
+          "zh-CN": "-t（例：八 baat3）",
+          "en": "-t (e.g. 八 baat3)"
+        },
+        {
+          "zh-HK": "-p（例：執 zap1）",
+          "zh-CN": "-p（例：执 zap1）",
+          "en": "-p (e.g. 执 zap1)"
+        },
+        {
+          "zh-HK": "-k（例：百 baak3）",
+          "zh-CN": "-k（例：百 baak3）",
+          "en": "-k (e.g. 百 baak3)"
+        },
+        {
+          "zh-HK": "冇入聲",
+          "zh-CN": "没有入声",
+          "en": "No entering-tone ending"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q12",
+      "category": {
+        "zh-HK": "拼音",
+        "zh-CN": "拼音",
+        "en": "Pinyin"
+      },
+      "question": {
+        "zh-HK": "「飯」字讀咩聲調？",
+        "zh-CN": "「饭」字读什么声调？",
+        "en": "What tone is 「饭」 pronounced in?"
+      },
+      "options": [
+        {
+          "zh-HK": "faan1（陰平）",
+          "zh-CN": "faan1（阴平）",
+          "en": "faan1 — high level (tone 1)"
+        },
+        {
+          "zh-HK": "faan3（陰去）",
+          "zh-CN": "faan3（阴去）",
+          "en": "faan3 — low falling (tone 3)"
+        },
+        {
+          "zh-HK": "faan6（陽去）",
+          "zh-CN": "faan6（阳去）",
+          "en": "faan6 — low level (tone 6)"
+        },
+        {
+          "zh-HK": "faan2（陰上）",
+          "zh-CN": "faan2（阴上）",
+          "en": "faan2 — low rising (tone 2)"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q13",
+      "category": {
+        "zh-HK": "拼音",
+        "zh-CN": "拼音",
+        "en": "Pinyin"
+      },
+      "question": {
+        "zh-HK": "「一」字單獨讀咩聲調？",
+        "zh-CN": "「一」字单独读什么声调？",
+        "en": "What tone is 「一」 pronounced in (alone)?"
+      },
+      "options": [
+        {
+          "zh-HK": "jat6（陽去）",
+          "zh-CN": "jat6（阳去）",
+          "en": "jat6 — low level (tone 6)"
+        },
+        {
+          "zh-HK": "jat2（陰上）",
+          "zh-CN": "jat2（阴上）",
+          "en": "jat2 — low rising (tone 2)"
+        },
+        {
+          "zh-HK": "jat3（陰去）",
+          "zh-CN": "jat3（阴去）",
+          "en": "jat3 — low falling (tone 3)"
+        },
+        {
+          "zh-HK": "jat1（陰入）",
+          "zh-CN": "jat1（阴入）",
+          "en": "jat1 — high stopped (tone 1, entering)"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q14",
+      "category": {
+        "zh-HK": "俚語",
+        "zh-CN": "俚语",
+        "en": "Slang"
+      },
+      "question": {
+        "zh-HK": "「你咁叻，梗係得你啦！」最貼切嘅語氣係？",
+        "zh-CN": "「你这么厉害，当然得你啦！」最贴切的语气是？",
+        "en": "「你咁叻，梗係得你啦！」 — what's the actual tone here?"
+      },
+      "options": [
+        {
+          "zh-HK": "反話 / 暗串",
+          "zh-CN": "反话 / 暗讽",
+          "en": "Sarcasm / passive dig"
+        },
+        {
+          "zh-HK": "真心讚你",
+          "zh-CN": "真心夸你",
+          "en": "Sincere praise"
+        },
+        {
+          "zh-HK": "好奇 / 試探",
+          "zh-CN": "好奇 / 试探",
+          "en": "Curious / probing"
+        },
+        {
+          "zh-HK": "擔心你",
+          "zh-CN": "担心你",
+          "en": "Worried about you"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q15",
+      "category": {
+        "zh-HK": "俚語",
+        "zh-CN": "俚语",
+        "en": "Slang"
+      },
+      "question": {
+        "zh-HK": "「執生」喺以下邊個場景用最貼切？",
+        "zh-CN": "「执生」在以下哪个场景用最贴切？",
+        "en": "Which scenario best fits 「执生」?"
+      },
+      "options": [
+        {
+          "zh-HK": "你喺公司做清潔",
+          "zh-CN": "你在公司做清洁",
+          "en": "You're cleaning the office"
+        },
+        {
+          "zh-HK": "你喺台上面表演突然忘詞，要即時救場",
+          "zh-CN": "你在台上表演突然忘词，要即时救场",
+          "en": "You're on stage, forget your lines — must improvise on the spot"
+        },
+        {
+          "zh-HK": "你喺朋友 party 傾偈",
+          "zh-CN": "你在朋友 party 闲聊",
+          "en": "You're chatting at a friend's party"
+        },
+        {
+          "zh-HK": "你喺屋企瞓覺",
+          "zh-CN": "你在家睡觉",
+          "en": "You're sleeping at home"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q16",
+      "category": {
+        "zh-HK": "文化",
+        "zh-CN": "文化",
+        "en": "Culture"
+      },
+      "question": {
+        "zh-HK": "飲茶時同陌生人「搭枱」係咩意思？",
+        "zh-CN": "饮茶时和陌生人「搭枱」是什么意思？",
+        "en": "In a tea house (yum cha), what does 「搭枱」 with strangers mean?"
+      },
+      "options": [
+        {
+          "zh-HK": "撞到朋友打招呼",
+          "zh-CN": "撞到朋友打招呼",
+          "en": "Running into a friend and saying hi"
+        },
+        {
+          "zh-HK": "叫侍應過嚟",
+          "zh-CN": "叫服务员过来",
+          "en": "Calling the server over"
+        },
+        {
+          "zh-HK": "唔使預約，share 一張枱",
+          "zh-CN": "不用预约，share 一张桌",
+          "en": "Sharing a table with strangers (no reservation needed)"
+        },
+        {
+          "zh-HK": "投訴餐廳",
+          "zh-CN": "投诉餐厅",
+          "en": "Complaining to the restaurant"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q17",
+      "category": {
+        "zh-HK": "拼音",
+        "zh-CN": "拼音",
+        "en": "Pinyin"
+      },
+      "question": {
+        "zh-HK": "「一百」嘅「一」實際讀咩調？",
+        "zh-CN": "「一百」的「一」实际读什么调？",
+        "en": "In 「一百」, what tone is 「一」 actually pronounced in?"
+      },
+      "options": [
+        {
+          "zh-HK": "jat4（陽平）",
+          "zh-CN": "jat4（阳平）",
+          "en": "jat4 — low rising (tone 4)"
+        },
+        {
+          "zh-HK": "jat6（陽去）",
+          "zh-CN": "jat6（阳去）",
+          "en": "jat6 — low level (tone 6)"
+        },
+        {
+          "zh-HK": "jat2（陰上）",
+          "zh-CN": "jat2（阴上）",
+          "en": "jat2 — low rising (tone 2)"
+        },
+        {
+          "zh-HK": "jat1（陰入）",
+          "zh-CN": "jat1（阴入）",
+          "en": "jat1 — high stopped (tone 1, entering)"
+        }
+      ],
+      "answer": 3
     }
   ],
   "mbtiQuestions": [
     {
       "id": "m1",
       "dimension": "speed",
-      "question": "你想学粤语的目的是？",
-      "options": ["想快点能说，开口流利（速成型）", "不着急慢慢来，能听懂就行（慢热型）"]
+      "question": {
+        "zh-HK": "你想學廣東話嘅目的係？",
+        "zh-CN": "你想学粤语的目的是？",
+        "en": "Why do you want to learn Cantonese?"
+      },
+      "options": [
+        {
+          "zh-HK": "想快啲識講，開口流利（速成型）",
+          "zh-CN": "想快点能说，开口流利（速成型）",
+          "en": "I want to speak fluently ASAP (Speed type)"
+        },
+        {
+          "zh-HK": "唔急慢慢嚟，聽得明就 OK（慢熱型）",
+          "zh-CN": "不着急慢慢来，能听懂就行（慢热型）",
+          "en": "No rush — understanding is enough (Slow-burn type)"
+        }
+      ]
     },
     {
       "id": "m2",
       "dimension": "learn",
-      "question": "学新东西时你更习惯？",
-      "options": ["先听别人怎么说，看大量例子（听讲型）", "自己先开口试，边说边学（倾偈型）"]
+      "question": {
+        "zh-HK": "學新嘢嗰陣你更習慣？",
+        "zh-CN": "学新东西时你更习惯？",
+        "en": "When learning something new, what are you more used to?"
+      },
+      "options": [
+        {
+          "zh-HK": "先聽人哋點講，睇大量例子（聽講型）",
+          "zh-CN": "先听别人怎么说，看大量例子（听讲型）",
+          "en": "Listen to others and study many examples (Listening type)"
+        },
+        {
+          "zh-HK": "自己先開口試，邊講邊學（傾偈型）",
+          "zh-CN": "自己先开口试，边说边学（倾偈型）",
+          "en": "Try speaking right away and learn as I go (Chatting type)"
+        }
+      ]
     },
     {
       "id": "m3",
       "dimension": "social",
-      "question": "你更愿意？",
-      "options": ["找语伴、社群一起练（社交型）", "自己看视频安静学（独狼型）"]
+      "question": {
+        "zh-HK": "你更願意？",
+        "zh-CN": "你更愿意？",
+        "en": "What do you prefer?"
+      },
+      "options": [
+        {
+          "zh-HK": "搵語伴、社群一齊練（社交型）",
+          "zh-CN": "找语伴、社群一起练（社交型）",
+          "en": "Find a language partner or community to practice with (Social type)"
+        },
+        {
+          "zh-HK": "自己睇片靜靜學（獨狼型）",
+          "zh-CN": "自己看视频安静学（独狼型）",
+          "en": "Learn alone by watching videos quietly (Lone wolf type)"
+        }
+      ]
     },
     {
       "id": "m4",
       "dimension": "style",
-      "question": "学语言时你？",
-      "options": ["必须搞懂语法和规则（学院派）", "不管规则，模仿就完事（野生派）"]
+      "question": {
+        "zh-HK": "學語言嗰陣你？",
+        "zh-CN": "学语言时你？",
+        "en": "When learning a language, you..."
+      },
+      "options": [
+        {
+          "zh-HK": "一定要搞掂文法同規則（學院派）",
+          "zh-CN": "必须搞懂语法和规则（学院派）",
+          "en": "Must understand grammar and rules (Academic type)"
+        },
+        {
+          "zh-HK": "唔理規則，模仿就搞掂（野生派）",
+          "zh-CN": "不管规则，模仿就完事（野生派）",
+          "en": "Skip rules, just imitate (Wild type)"
+        }
+      ]
+    },
+    {
+      "id": "m5",
+      "dimension": "speed",
+      "question": {
+        "zh-HK": "粵語老師教 9 聲 6 調，你會？",
+        "zh-CN": "粤语老师教 9 声 6 调，你会？",
+        "en": "Teacher's about to teach the 9 tones / 6 finals — what do you do?"
+      },
+      "options": [
+        {
+          "zh-HK": "想 1 週內死磕完，再實操（速成型）",
+          "zh-CN": "想 1 周内死磕完，再实操（速成型）",
+          "en": "Want to cram it all in 1 week, then start using it (Speed type)"
+        },
+        {
+          "zh-HK": "跟住老師節奏慢慢嚟（慢熱型）",
+          "zh-CN": "跟着老师节奏慢慢来（慢热型）",
+          "en": "Just follow the teacher's pace (Slow-burn type)"
+        }
+      ]
+    },
+    {
+      "id": "m6",
+      "dimension": "speed",
+      "question": {
+        "zh-HK": "朋友推薦你一個 3 個月嘅粵語速成班，你會？",
+        "zh-CN": "朋友推荐你一个 3 个月的粤语速成班，你会？",
+        "en": "A friend recommends a 3-month Cantonese crash course — you…"
+      },
+      "options": [
+        {
+          "zh-HK": "3 個月 OK 啦，跟住節奏嚟（慢熱型）",
+          "zh-CN": "3 个月 OK 啦，跟着节奏来（慢热型）",
+          "en": "3 months is fine, just follow the pace (Slow-burn type)"
+        },
+        {
+          "zh-HK": "3 個月太耐啦，2 個月就搞掂啦（速成型）",
+          "zh-CN": "3 个月太长，2 个月搞定（速成型）",
+          "en": "3 months? Too long — 2 should do it (Speed type)"
+        }
+      ]
+    },
+    {
+      "id": "m7",
+      "dimension": "learn",
+      "question": {
+        "zh-HK": "你學新詞彙嘅時候？",
+        "zh-CN": "你学新词汇的时候？",
+        "en": "When you learn new vocabulary, you…"
+      },
+      "options": [
+        {
+          "zh-HK": "抄低 + 睇例句 + 聽 5 次（聽講型）",
+          "zh-CN": "抄下来 + 看例句 + 听 5 次（听讲型）",
+          "en": "Write it down + read examples + listen 5x (Listening type)"
+        },
+        {
+          "zh-HK": "直接拎去同朋友傾（傾偈型）",
+          "zh-CN": "直接拿去跟朋友用（倾偈型）",
+          "en": "Use it on a friend right away (Chatting type)"
+        }
+      ]
+    },
+    {
+      "id": "m8",
+      "dimension": "learn",
+      "question": {
+        "zh-HK": "遇到一個新句型你會？",
+        "zh-CN": "遇到一个新句型你会？",
+        "en": "When you meet a new sentence pattern, you…"
+      },
+      "options": [
+        {
+          "zh-HK": "一定要睇明規則先開口（聽講型）",
+          "zh-CN": "一定要看懂规则再开口（听讲型）",
+          "en": "Must understand the rules before I dare speak (Listening type)"
+        },
+        {
+          "zh-HK": "直接試下講，錯咗再睇規則（傾偈型）",
+          "zh-CN": "直接试下讲，错了再看规则（倾偈型）",
+          "en": "Try it out — fix the rules later if I mess up (Chatting type)"
+        }
+      ]
+    },
+    {
+      "id": "m9",
+      "dimension": "social",
+      "question": {
+        "zh-HK": "你學 1 個月後想點？",
+        "zh-CN": "你学 1 个月后想怎么？",
+        "en": "After 1 month of learning, you want to…"
+      },
+      "options": [
+        {
+          "zh-HK": "搵個語伴一齊練（社交型）",
+          "zh-CN": "找个语伴一起练（社交型）",
+          "en": "Find a partner and practice together (Social type)"
+        },
+        {
+          "zh-HK": "繼續自己睇視頻學（獨狼型）",
+          "zh-CN": "继续自己看视频学（独狼型）",
+          "en": "Keep watching videos on my own (Lone wolf)"
+        }
+      ]
+    },
+    {
+      "id": "m10",
+      "dimension": "social",
+      "question": {
+        "zh-HK": "如果有全粵語嘅讀書會你會？",
+        "zh-CN": "如果有全粤语的读书会你会？",
+        "en": "If there's an all-Cantonese book club, you…"
+      },
+      "options": [
+        {
+          "zh-HK": "唔使喇，自己睇書 OK（獨狼型）",
+          "zh-CN": "不用了，自己看书就行（独狼型）",
+          "en": "Skip it — reading alone is fine (Lone wolf)"
+        },
+        {
+          "zh-HK": "報名參加，順便識朋友（社交型）",
+          "zh-CN": "报名参加，顺便交朋友（社交型）",
+          "en": "Sign up, and maybe make some friends (Social type)"
+        }
+      ]
+    },
+    {
+      "id": "m11",
+      "dimension": "style",
+      "question": {
+        "zh-HK": "你學文法時會？",
+        "zh-CN": "你学语法时会？",
+        "en": "When you study grammar, you…"
+      },
+      "options": [
+        {
+          "zh-HK": "拆主謂賓，分析結構（學院派）",
+          "zh-CN": "拆主谓宾，分析结构（学院派）",
+          "en": "Break down subject / verb / object, analyze the structure (Academic)"
+        },
+        {
+          "zh-HK": "唔理規則，直接模仿（野生派）",
+          "zh-CN": "不管规则，直接模仿（野生派）",
+          "en": "Skip the rules, just imitate (Wild)"
+        }
+      ]
+    },
+    {
+      "id": "m12",
+      "dimension": "style",
+      "question": {
+        "zh-HK": "你學新表達時會？",
+        "zh-CN": "你学新表达时会？",
+        "en": "When you learn a new expression, you…"
+      },
+      "options": [
+        {
+          "zh-HK": "一定要搞清楚規則（學院派）",
+          "zh-CN": "一定要搞清楚规则（学院派）",
+          "en": "Must figure out the rules behind it (Academic)"
+        },
+        {
+          "zh-HK": "模仿就用，唔問點解（野生派）",
+          "zh-CN": "模仿就用，不问为什么（野生派）",
+          "en": "Just imitate and use it — no why (Wild)"
+        }
+      ]
     }
   ]
 }

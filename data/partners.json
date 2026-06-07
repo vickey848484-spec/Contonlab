@@ -2,91 +2,217 @@
   "partners": [
     {
       "id": "p1",
-      "name": "阿欣",
-      "gender": "女",
+      "name": {
+        "zh-HK": "阿欣",
+        "zh-CN": "阿欣",
+        "en": "Ah Yan"
+      },
+      "gender": {
+        "zh-HK": "女",
+        "zh-CN": "女",
+        "en": "Female"
+      },
       "age": 24,
-      "region": "广州",
-      "level": "入门",
-      "tags": [
-        "听讲",
-        "社交"
-      ],
-      "intro": "从普通话零基础自学粤语 2 年，最懂入门阶段的痛点。",
+      "region": {
+        "zh-HK": "廣州",
+        "zh-CN": "广州",
+        "en": "Guangzhou"
+      },
+      "level": {
+        "zh-HK": "入門",
+        "zh-CN": "入门",
+        "en": "Beginner"
+      },
+      "tags": {
+        "zh-HK": ["聽講", "社交"],
+        "zh-CN": ["听讲", "社交"],
+        "en": ["Listening", "Social"]
+      },
+      "intro": {
+        "zh-HK": "從普通話零基礎自學廣東話 2 年，最識入門階段嘅痛點。",
+        "zh-CN": "从普通话零基础自学粤语 2 年，最懂入门阶段的痛点。",
+        "en": "Self-studied Cantonese from a zero Mandarin base for 2 years — knows every beginner pain point firsthand."
+      },
       "contact": "wechat: ahhin_cantonese",
       "icon": "🐰"
     },
     {
       "id": "p2",
-      "name": "小明",
-      "gender": "男",
+      "name": {
+        "zh-HK": "小明",
+        "zh-CN": "小明",
+        "en": "Siu Ming"
+      },
+      "gender": {
+        "zh-HK": "男",
+        "zh-CN": "男",
+        "en": "Male"
+      },
       "age": 28,
-      "region": "香港",
-      "level": "入门",
-      "tags": [
-        "听讲",
-        "独狼"
-      ],
-      "intro": "在香港公司带过 50+ 新移民讲粤语，语速慢、纠音准。",
+      "region": {
+        "zh-HK": "香港",
+        "zh-CN": "香港",
+        "en": "Hong Kong"
+      },
+      "level": {
+        "zh-HK": "入門",
+        "zh-CN": "入门",
+        "en": "Beginner"
+      },
+      "tags": {
+        "zh-HK": ["聽講", "獨狼"],
+        "zh-CN": ["听讲", "独狼"],
+        "en": ["Listening", "Solo"]
+      },
+      "intro": {
+        "zh-HK": "喺香港公司帶過 50+ 個新移民講廣東話，語速慢、糾音準。",
+        "zh-CN": "在香港公司带过 50+ 新移民讲粤语，语速慢、纠音准。",
+        "en": "Coached 50+ new immigrants in HK companies on Cantonese — slow pace, sharp on pronunciation correction."
+      },
       "contact": "wechat: siuming_hk",
       "icon": "🦊"
     },
     {
       "id": "p3",
-      "name": "嘉欣",
-      "gender": "女",
+      "name": {
+        "zh-HK": "嘉欣",
+        "zh-CN": "嘉欣",
+        "en": "Ka Yan"
+      },
+      "gender": {
+        "zh-HK": "女",
+        "zh-CN": "女",
+        "en": "Female"
+      },
       "age": 26,
-      "region": "澳门",
-      "level": "进阶",
-      "tags": [
-        "倾偈",
-        "社交"
-      ],
-      "intro": "陪练型语伴，专陪你讲日常生活：点餐、问路、shopping。",
+      "region": {
+        "zh-HK": "澳門",
+        "zh-CN": "澳门",
+        "en": "Macau"
+      },
+      "level": {
+        "zh-HK": "進階",
+        "zh-CN": "进阶",
+        "en": "Intermediate"
+      },
+      "tags": {
+        "zh-HK": ["傾偈", "社交"],
+        "zh-CN": ["倾偈", "社交"],
+        "en": ["Chatting", "Social"]
+      },
+      "intro": {
+        "zh-HK": "陪練型語伴，專陪你傾日常生活：落單、問路、shopping。",
+        "zh-CN": "陪练型语伴，专陪你讲日常生活：点餐、问路、shopping。",
+        "en": "Practice-partner type — focuses on daily life: ordering food, asking directions, shopping."
+      },
       "contact": "wechat: kaian_陪你倾",
       "icon": "🐱"
     },
     {
       "id": "p4",
-      "name": "阿杰",
-      "gender": "男",
+      "name": {
+        "zh-HK": "阿杰",
+        "zh-CN": "阿杰",
+        "en": "Ah Kit"
+      },
+      "gender": {
+        "zh-HK": "男",
+        "zh-CN": "男",
+        "en": "Male"
+      },
       "age": 30,
-      "region": "广州",
-      "level": "进阶",
-      "tags": [
-        "速成",
-        "独狼"
-      ],
-      "intro": "粤语播音专业毕业，喜欢跟你聊时事新闻，词汇量爆炸。",
+      "region": {
+        "zh-HK": "廣州",
+        "zh-CN": "广州",
+        "en": "Guangzhou"
+      },
+      "level": {
+        "zh-HK": "進階",
+        "zh-CN": "进阶",
+        "en": "Intermediate"
+      },
+      "tags": {
+        "zh-HK": ["速成", "獨狼"],
+        "zh-CN": ["速成", "独狼"],
+        "en": ["Speed", "Solo"]
+      },
+      "intro": {
+        "zh-HK": "廣東話播音科畢業，鍾意同你傾時事新聞，詞彙量爆棚。",
+        "zh-CN": "粤语播音专业毕业，喜欢跟你聊时事新闻，词汇量爆炸。",
+        "en": "Broadcasting-major grad who loves chatting current events — vocab explosion guaranteed."
+      },
       "contact": "wechat: jie_broadcast",
       "icon": "🐯"
     },
     {
       "id": "p5",
-      "name": "Vivi",
-      "gender": "女",
+      "name": {
+        "zh-HK": "Vivi",
+        "zh-CN": "Vivi",
+        "en": "Vivi"
+      },
+      "gender": {
+        "zh-HK": "女",
+        "zh-CN": "女",
+        "en": "Female"
+      },
       "age": 32,
-      "region": "香港",
-      "level": "高阶",
-      "tags": [
-        "倾偈",
-        "学院"
-      ],
-      "intro": "粤语语言学硕士，专治发音怪和音调怪，能讲清楚九声六调。",
+      "region": {
+        "zh-HK": "香港",
+        "zh-CN": "香港",
+        "en": "Hong Kong"
+      },
+      "level": {
+        "zh-HK": "高階",
+        "zh-CN": "高阶",
+        "en": "Advanced"
+      },
+      "tags": {
+        "zh-HK": ["傾偈", "學院"],
+        "zh-CN": ["倾偈", "学院"],
+        "en": ["Chatting", "Academic"]
+      },
+      "intro": {
+        "zh-HK": "廣東話語言學碩士，專醫發音怪同音調怪，講得清九聲六調。",
+        "zh-CN": "粤语语言学硕士，专治发音怪和音调怪，能讲清楚九声六调。",
+        "en": "MA in Cantonese linguistics — specialist in fixing weird pronunciation and tone issues. Can actually explain 九声六调."
+      },
       "contact": "wechat: vivi_linguist",
       "icon": "🐼"
     },
     {
       "id": "p6",
-      "name": "家明",
-      "gender": "男",
+      "name": {
+        "zh-HK": "家明",
+        "zh-CN": "家明",
+        "en": "Ka Ming"
+      },
+      "gender": {
+        "zh-HK": "男",
+        "zh-CN": "男",
+        "en": "Male"
+      },
       "age": 35,
-      "region": "广州",
-      "level": "高阶",
-      "tags": [
-        "速成",
-        "野生"
-      ],
-      "intro": "做外贸的香港通，俚语/俗语/职场黑话满级。",
+      "region": {
+        "zh-HK": "廣州",
+        "zh-CN": "广州",
+        "en": "Guangzhou"
+      },
+      "level": {
+        "zh-HK": "高階",
+        "zh-CN": "高阶",
+        "en": "Advanced"
+      },
+      "tags": {
+        "zh-HK": ["速成", "野生"],
+        "zh-CN": ["速成", "野生"],
+        "en": ["Speed", "Wild"]
+      },
+      "intro": {
+        "zh-HK": "做外貿嘅香港通，俚語／俗語／職場術語滿級。",
+        "zh-CN": "做外贸的香港通，俚语/俗语/职场黑话满级。",
+        "en": "HK trade expert — slang, idioms, and office jargon maxed out."
+      },
       "contact": "wechat: jiaming_trade",
       "icon": "🐶"
     }

@@ -2,136 +2,325 @@
   "courses": [
     {
       "id": "c1",
-      "title": "粤语拼音速成 · 9 声 6 调一次搞懂",
-      "level": "入门",
-      "tags": [
-        "速成",
-        "学院"
-      ],
-      "type": "视频课",
-      "duration": "2 周",
+      "title": {
+        "zh-HK": "廣東話拼音速成 · 9 聲 6 調一次搞掂",
+        "zh-CN": "粤语拼音速成 · 9 声 6 调一次搞懂",
+        "en": "Cantonese Pinyin Crash Course · Master 9 Tones 6 Finals"
+      },
+      "level": {
+        "zh-HK": "入門",
+        "zh-CN": "入门",
+        "en": "Beginner"
+      },
+      "tags": {
+        "zh-HK": ["速成", "學院"],
+        "zh-CN": ["速成", "学院"],
+        "en": ["Speed", "Academic"]
+      },
+      "type": {
+        "zh-HK": "影片課",
+        "zh-CN": "视频课",
+        "en": "Video course"
+      },
+      "duration": {
+        "zh-HK": "2 星期",
+        "zh-CN": "2 周",
+        "en": "2 weeks"
+      },
       "price": "¥99",
-      "highlight": "发音准不准看这课。9 声 6 调 + 拼音对照表一次性讲清。",
+      "highlight": {
+        "zh-HK": "發音準唔準睇呢課。9 聲 6 調 + 拼音對照表一次過講清。",
+        "zh-CN": "发音准不准看这课。9 声 6 调 + 拼音对照表一次性讲清。",
+        "en": "Pronunciation lives or dies here. 9 tones, 6 finals + a full pinyin chart — all in one course."
+      },
       "link": "#",
       "icon": "ph-target"
     },
     {
       "id": "c2",
-      "title": "新手 100 词 · 出门/点餐/搭讪全 cover",
-      "level": "入门",
-      "tags": [
-        "听讲",
-        "学院"
-      ],
-      "type": "视频课",
-      "duration": "4 周",
+      "title": {
+        "zh-HK": "新手 100 詞 · 出門／落單／搭訕全 cover",
+        "zh-CN": "新手 100 词 · 出门/点餐/搭讪全 cover",
+        "en": "100 Beginner Words · Going Out, Ordering, Chatting People Up"
+      },
+      "level": {
+        "zh-HK": "入門",
+        "zh-CN": "入门",
+        "en": "Beginner"
+      },
+      "tags": {
+        "zh-HK": ["聽講", "學院"],
+        "zh-CN": ["听讲", "学院"],
+        "en": ["Listening", "Academic"]
+      },
+      "type": {
+        "zh-HK": "影片課",
+        "zh-CN": "视频课",
+        "en": "Video course"
+      },
+      "duration": {
+        "zh-HK": "4 星期",
+        "zh-CN": "4 周",
+        "en": "4 weeks"
+      },
       "price": "¥199",
-      "highlight": "高频生活词汇 100 个，配场景短句，到香港/广州落地直接能用。",
+      "highlight": {
+        "zh-HK": "高頻生活詞彙 100 個，配場景短句，去到香港／廣州落地即刻用得。",
+        "zh-CN": "高频生活词汇 100 个，配场景短句，到香港/广州落地直接能用。",
+        "en": "100 high-frequency life words + scene phrases — usable the moment you land in HK or Guangzhou."
+      },
       "link": "#",
       "icon": "ph-bowl-food"
     },
     {
       "id": "c3",
-      "title": "自我介绍 + 闲聊破冰 · 30 个句型模板",
-      "level": "入门",
-      "tags": [
-        "倾偈",
-        "社交"
-      ],
-      "type": "视频课",
-      "duration": "3 周",
+      "title": {
+        "zh-HK": "自我介紹 + 閒聊破冰 · 30 個句型模板",
+        "zh-CN": "自我介绍 + 闲聊破冰 · 30 个句型模板",
+        "en": "Self-Intro + Small Talk · 30 Sentence Templates"
+      },
+      "level": {
+        "zh-HK": "入門",
+        "zh-CN": "入门",
+        "en": "Beginner"
+      },
+      "tags": {
+        "zh-HK": ["傾偈", "社交"],
+        "zh-CN": ["倾偈", "社交"],
+        "en": ["Chatting", "Social"]
+      },
+      "type": {
+        "zh-HK": "影片課",
+        "zh-CN": "视频课",
+        "en": "Video course"
+      },
+      "duration": {
+        "zh-HK": "3 星期",
+        "zh-CN": "3 周",
+        "en": "3 weeks"
+      },
       "price": "¥149",
-      "highlight": "陌生人破冰 / 工作介绍 / 加微信问候，30 个句型直接套。",
+      "highlight": {
+        "zh-HK": "陌生人破冰／工作介紹／加微信問候，30 個句型直接套。",
+        "zh-CN": "陌生人破冰 / 工作介绍 / 加微信问候，30 个句型直接套。",
+        "en": "Ice-breaking with strangers / work intros / WeChat hellos — 30 plug-and-play sentence templates."
+      },
       "link": "#",
       "icon": "ph-handshake"
     },
     {
       "id": "c4",
-      "title": "场景口语 50 课 · 搭地铁/睇医生/Shopping",
-      "level": "进阶",
-      "tags": [
-        "倾偈",
-        "社交"
-      ],
-      "type": "视频课",
-      "duration": "8 周",
+      "title": {
+        "zh-HK": "場景口語 50 課 · 搭地鐵／睇醫生／Shopping",
+        "zh-CN": "场景口语 50 课 · 搭地铁/睇医生/Shopping",
+        "en": "50 Real-Life Scenarios · MTR, Doctor, Shopping"
+      },
+      "level": {
+        "zh-HK": "進階",
+        "zh-CN": "进阶",
+        "en": "Intermediate"
+      },
+      "tags": {
+        "zh-HK": ["傾偈", "社交"],
+        "zh-CN": ["倾偈", "社交"],
+        "en": ["Chatting", "Social"]
+      },
+      "type": {
+        "zh-HK": "影片課",
+        "zh-CN": "视频课",
+        "en": "Video course"
+      },
+      "duration": {
+        "zh-HK": "8 星期",
+        "zh-CN": "8 周",
+        "en": "8 weeks"
+      },
       "price": "¥399",
-      "highlight": "50 个真实生活场景，每课 5 分钟，看完就能用。",
+      "highlight": {
+        "zh-HK": "50 個真實生活場景，每課 5 分鐘，睇完即用得。",
+        "zh-CN": "50 个真实生活场景，每课 5 分钟，看完就能用。",
+        "en": "50 real-life scenarios, 5 min each — finish a lesson, use it that day."
+      },
       "link": "#",
       "icon": "ph-train"
     },
     {
       "id": "c5",
-      "title": "粤语俚语大全 · 听唔明=文盲",
-      "level": "进阶",
-      "tags": [
-        "速成",
-        "野生"
-      ],
-      "type": "视频课",
-      "duration": "6 周",
+      "title": {
+        "zh-HK": "廣東話俚語大全 · 聽唔明 = 文盲",
+        "zh-CN": "粤语俚语大全 · 听唔明=文盲",
+        "en": "Cantonese Slang Pack · Don't Stay Clueless"
+      },
+      "level": {
+        "zh-HK": "進階",
+        "zh-CN": "进阶",
+        "en": "Intermediate"
+      },
+      "tags": {
+        "zh-HK": ["速成", "野生"],
+        "zh-CN": ["速成", "野生"],
+        "en": ["Speed", "Wild"]
+      },
+      "type": {
+        "zh-HK": "影片課",
+        "zh-CN": "视频课",
+        "en": "Video course"
+      },
+      "duration": {
+        "zh-HK": "6 星期",
+        "zh-CN": "6 周",
+        "en": "6 weeks"
+      },
       "price": "¥299",
-      "highlight": "本地人天天讲的 200+ 俚语/俗语，从「执生」到「食字」全讲。",
+      "highlight": {
+        "zh-HK": "本地人日日講嘅 200+ 俚語／俗語，由「執生」到「食字」全部講晒。",
+        "zh-CN": "本地人天天讲的 200+ 俚语/俗语，从「执生」到「食字」全讲。",
+        "en": "200+ slang and idioms locals actually use daily — from 「执生」 to 「食字」, all covered."
+      },
       "link": "#",
       "icon": "ph-smiley"
     },
     {
       "id": "c6",
-      "title": "看港剧学粤语 · 经典台词逐句拆解",
-      "level": "进阶",
-      "tags": [
-        "听讲",
-        "野生"
-      ],
-      "type": "视频课",
-      "duration": "12 周",
+      "title": {
+        "zh-HK": "睇港劇學廣東話 · 經典對白逐句拆解",
+        "zh-CN": "看港剧学粤语 · 经典台词逐句拆解",
+        "en": "Learn Cantonese from HK Drama · Classic Lines Dissected"
+      },
+      "level": {
+        "zh-HK": "進階",
+        "zh-CN": "进阶",
+        "en": "Intermediate"
+      },
+      "tags": {
+        "zh-HK": ["聽講", "野生"],
+        "zh-CN": ["听讲", "野生"],
+        "en": ["Listening", "Wild"]
+      },
+      "type": {
+        "zh-HK": "影片課",
+        "zh-CN": "视频课",
+        "en": "Video course"
+      },
+      "duration": {
+        "zh-HK": "12 星期",
+        "zh-CN": "12 周",
+        "en": "12 weeks"
+      },
       "price": "¥499",
-      "highlight": "《使徒行者》《难兄难弟》经典台词逐句拆，听懂港剧不再靠字幕。",
+      "highlight": {
+        "zh-HK": "《使徒行者》《難兄難弟》經典對白逐句拆，聽明港劇唔使再靠字幕。",
+        "zh-CN": "《使徒行者》《难兄难弟》经典台词逐句拆，听懂港剧不再靠字幕。",
+        "en": "Line-by-line breakdown of classic lines from 《使徒行者》 and 《难兄难弟》 — ditch the subtitles for good."
+      },
       "link": "#",
       "icon": "ph-television"
     },
     {
       "id": "c7",
-      "title": "商务粤语 · Email/会议/谈判",
-      "level": "高阶",
-      "tags": [
-        "学院",
-        "独狼"
-      ],
-      "type": "1v1 直播",
-      "duration": "8 周",
+      "title": {
+        "zh-HK": "商務廣東話 · Email／會議／談判",
+        "zh-CN": "商务粤语 · Email/会议/谈判",
+        "en": "Business Cantonese · Email, Meetings, Negotiation"
+      },
+      "level": {
+        "zh-HK": "高階",
+        "zh-CN": "高阶",
+        "en": "Advanced"
+      },
+      "tags": {
+        "zh-HK": ["學院", "獨狼"],
+        "zh-CN": ["学院", "独狼"],
+        "en": ["Academic", "Solo"]
+      },
+      "type": {
+        "zh-HK": "1 對 1 直播",
+        "zh-CN": "1v1 直播",
+        "en": "1-on-1 live"
+      },
+      "duration": {
+        "zh-HK": "8 星期",
+        "zh-CN": "8 周",
+        "en": "8 weeks"
+      },
       "price": "¥2999",
-      "highlight": "客户接待/会议发言/书面邮件全 cover，配 1v1 老师纠错。",
+      "highlight": {
+        "zh-HK": "客戶接待／會議發言／書面郵件全 cover，配 1 對 1 老師糾錯。",
+        "zh-CN": "客户接待/会议发言/书面邮件全 cover，配 1v1 老师纠错。",
+        "en": "Client reception / meeting pitches / formal emails — all covered, with 1-on-1 teacher correction."
+      },
       "link": "#",
       "icon": "ph-briefcase"
     },
     {
       "id": "c8",
-      "title": "粤语诗词 · 从《西厢记》到黄伟文",
-      "level": "高阶",
-      "tags": [
-        "学院",
-        "野生"
-      ],
-      "type": "视频课",
-      "duration": "10 周",
+      "title": {
+        "zh-HK": "廣東話詩詞 · 從《西廂記》到黃偉文",
+        "zh-CN": "粤语诗词 · 从《西厢记》到黄伟文",
+        "en": "Cantonese Poetry · From 《西厢记》 to Wyman Wong"
+      },
+      "level": {
+        "zh-HK": "高階",
+        "zh-CN": "高阶",
+        "en": "Advanced"
+      },
+      "tags": {
+        "zh-HK": ["學院", "野生"],
+        "zh-CN": ["学院", "野生"],
+        "en": ["Academic", "Wild"]
+      },
+      "type": {
+        "zh-HK": "影片課",
+        "zh-CN": "视频课",
+        "en": "Video course"
+      },
+      "duration": {
+        "zh-HK": "10 星期",
+        "zh-CN": "10 周",
+        "en": "10 weeks"
+      },
       "price": "¥699",
-      "highlight": "粤语古诗词+现代粤语歌词赏析，文化底蕴拉满。",
+      "highlight": {
+        "zh-HK": "廣東話古詩詞 + 現代廣東話歌詞賞析，文化底蘊拉到滿。",
+        "zh-CN": "粤语古诗词+现代粤语歌词赏析，文化底蕴拉满。",
+        "en": "Classical Cantonese poetry + modern Cantopop lyric appreciation — culture depth maxed out."
+      },
       "link": "#",
       "icon": "ph-book-open"
     },
     {
       "id": "c9",
-      "title": "深度文化课 · 饮茶/拜神/婚丧全解",
-      "level": "高阶",
-      "tags": [
-        "野生",
-        "社交"
-      ],
-      "type": "社群共学",
-      "duration": "6 周",
+      "title": {
+        "zh-HK": "深度文化課 · 飲茶／拜神／婚喪全解",
+        "zh-CN": "深度文化课 · 饮茶/拜神/婚丧全解",
+        "en": "Deep Culture · Yum Cha, Worship, Weddings & Funerals"
+      },
+      "level": {
+        "zh-HK": "高階",
+        "zh-CN": "高阶",
+        "en": "Advanced"
+      },
+      "tags": {
+        "zh-HK": ["野生", "社交"],
+        "zh-CN": ["野生", "社交"],
+        "en": ["Wild", "Social"]
+      },
+      "type": {
+        "zh-HK": "社群共學",
+        "zh-CN": "社群共学",
+        "en": "Group learning"
+      },
+      "duration": {
+        "zh-HK": "6 星期",
+        "zh-CN": "6 周",
+        "en": "6 weeks"
+      },
       "price": "¥899",
-      "highlight": "茶楼/庙宇/婚丧习俗全解，跟本地人聊文化不再露怯。",
+      "highlight": {
+        "zh-HK": "茶樓／廟宇／婚喪習俗全解，同本地人傾文化唔使再怯。",
+        "zh-CN": "茶楼/庙宇/婚丧习俗全解，跟本地人聊文化不再露怯。",
+        "en": "Tea houses / temples / wedding & funeral customs — chat culture with locals without faking it."
+      },
       "link": "#",
       "icon": "ph-flower-lotus"
     }

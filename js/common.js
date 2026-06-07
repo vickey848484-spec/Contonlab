@@ -1,5 +1,5 @@
 /* ============================================================
- * common.js — 公共工具：localStorage / 主题切换 / 顶导
+ * common.js — 公共工具：localStorage / 主題切換 / 頂導
  * ============================================================ */
 (function (global) {
   'use strict';
@@ -44,14 +44,14 @@
 
   async function loadJSON(path) {
     const res = await fetch(path, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`加载 ${path} 失败：${res.status}`);
+    if (!res.ok) throw new Error(`加載 ${path} 失敗：${res.status}`);
     return res.json();
   }
 
   const LEVELS = [
-    { key: 'entry',  code: 0, name: '听唔明仔',     short: '入门', cls: 'level-entry' },
-    { key: 'mid',    code: 1, name: '識少少扮代表', short: '进阶', cls: 'level-mid'   },
-    { key: 'high',   code: 2, name: '嘴替本替',     short: '高阶', cls: 'level-high'  },
+    { key: 'entry',  code: 0, name: '聽唔明仔',     short: '入門', cls: 'level-entry' },
+    { key: 'mid',    code: 1, name: '識少少扮代表', short: '進階', cls: 'level-mid'   },
+    { key: 'high',   code: 2, name: '嘴替本替',     short: '高階', cls: 'level-high'  },
   ];
   function getLevelByScore(score, total) {
     const pct = score / total;
@@ -89,7 +89,7 @@
     const btn = document.createElement('button');
     btn.id = 'theme-toggle';
     btn.className = 'theme-toggle';
-    btn.title = '切换主题';
+    btn.title = '切換主題';
     btn.textContent = '🌓';
     btn.addEventListener('click', () => {
       toggleTheme();
@@ -100,32 +100,49 @@
 
   function injectTopbar(active) {
     const items = [
-      { key: 'home',    label: '首页',   href: 'index.html' },
-      { key: 'test',    label: '测一测', href: 'test.html' },
-      { key: 'partner', label: '找语伴', href: 'partner.html' },
-      { key: 'course',  label: '选课',   href: 'course.html' },
-      { key: 'qa',      label: 'Q&A',   href: 'qa.html' },
-      { key: 'research',label: '调研',   href: 'research.html' },
-      { key: 'about',   label: '关于我', href: 'about.html' },
+      { key: 'home',    i18n: 'topbar.home',     href: 'index.html' },
+      { key: 'test',    i18n: 'topbar.test',     href: 'test.html' },
+      { key: 'partner', i18n: 'topbar.partner',  href: 'partner.html' },
+      { key: 'course',  i18n: 'topbar.course',   href: 'course.html' },
+      { key: 'qa',      i18n: 'topbar.qa',       href: 'qa.html' },
+      { key: 'research',i18n: 'topbar.research', href: 'research.html' },
+      { key: 'about',   i18n: 'topbar.about',    href: 'about.html' },
     ];
+    const lang = getLang();
     const bar = document.createElement('div');
     bar.className = 'topbar';
     bar.innerHTML = `
       <div class="topbar-inner">
-        <a class="logo" href="index.html"><span class="pink" style="font-size: 30px;">識</span><span style="font-size: 22px;">讲粤语</span></a>
+        <a class="logo" href="index.html"><span class="pink" style="font-size: 30px;">識</span><span style="font-size: 22px;">講粵語</span></a>
         <nav class="row topbar-nav" style="gap:4px;">
           ${items.map(it => `
-            <a href="${it.href}" class="topbar-link ${active === it.key ? 'is-active' : ''}">${it.label}</a>
+            <a href="${it.href}" class="topbar-link ${active === it.key ? 'is-active' : ''}" data-i18n="${it.i18n}">${t(it.i18n, lang)}</a>
           `).join('')}
         </nav>
+        <button class="topbar-lang" id="lang-toggle" title="切換語言 / Language">
+          ${LANG_LABEL[lang] || lang.toUpperCase()}
+        </button>
       </div>
     `;
     document.body.prepend(bar);
+
+    // 語言切換器
+    const btn = bar.querySelector('#lang-toggle');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const cur = getLang();
+        const idx = (LANGS.indexOf(cur) + 1) % LANGS.length;
+        const next = LANGS[idx];
+        setLang(next);
+        // 直接刷新当前页（最简单粗暴但可靠）
+        location.reload();
+      });
+    }
   }
 
-  /* ---------- 自定义光标（桌面端）---------- */
+  /* ---------- 自定義光標（桌面端）---------- */
   function initCustomCursor() {
-    if (window.matchMedia('(pointer: coarse)').matches) return; // 移动端跳过
+    if (window.matchMedia('(pointer: coarse)').matches) return; // 移動端跳過
     if (document.getElementById('custom-cursor')) return;
     document.body.classList.add('has-custom-cursor');
 
@@ -156,7 +173,7 @@
       }
     }
 
-    // 悬停可点击元素时光标变大
+    // 懸停可點擊元素時光標變大
     document.addEventListener('mouseover', (e) => {
       if (e.target.closest('a, button, .card, .partner-card, .course-card, .card-flat, input, select, label')) {
         cursor.classList.add('is-hover');
@@ -168,12 +185,12 @@
       }
     });
 
-    // 离开窗口时隐藏
+    // 離開窗口時隱藏
     document.addEventListener('mouseleave', () => cursor.classList.add('is-hidden'));
     document.addEventListener('mouseenter', () => cursor.classList.remove('is-hidden'));
   }
 
-  /* ---------- 滚动触发动画（IntersectionObserver）---------- */
+  /* ---------- 滾動觸發動畫（IntersectionObserver）---------- */
   function initScrollReveal() {
     if (!('IntersectionObserver' in window)) return;
     const els = document.querySelectorAll('.reveal');
@@ -191,12 +208,12 @@
     els.forEach(el => io.observe(el));
   }
 
-  /* ---------- thiings 风格 SVG 图标 ----------
-   * 24x24 viewBox，1.5px 描边，currentColor 继承
+  /* ---------- thiings 風格 SVG 圖標 ----------
+   * 24x24 viewBox，1.5px 描邊，currentColor 繼承
    * 用法: Cantonese.icon('rocket', 'class="big"') 或 ${Cantonese.icon('rocket')}
    */
   const ICONS = {
-    // UI 基础
+    // UI 基礎
     'rocket':           '<path d="M12 2 L18 8 L12 22 L6 8 Z M9 8 L15 8 M9 11 L15 11"/>',
     'arrow-right':      '<path d="M5 12 L19 12 M13 6 L19 12 L13 18"/>',
     'arrow-counter-clockwise': '<path d="M3 12 A9 9 0 1 0 6 5.5 M3 4 L3 9 L8 9"/>',
@@ -205,7 +222,7 @@
     'sparkle':          '<path d="M12 3 L13.5 9 L19 10.5 L13.5 12 L12 18 L10.5 12 L5 10.5 L10.5 9 Z M19 4 L20 6 L22 7 L20 8 L19 10 L18 8 L16 7 L18 6 Z"/>',
     'confetti':         '<path d="M5 5 L7 7 M19 5 L17 7 M5 19 L8 16 M19 19 L16 16 M12 12 L13 11 M9 14 L10 15 M15 9 L14 10 M12 3 L12 5 M12 19 L12 21 M3 12 L5 12 M19 12 L21 12"/>',
 
-    // 互动/沟通
+    // 互動/溝通
     'envelope':         '<rect x="3" y="6" width="18" height="13" rx="1.5"/><path d="M3 7 L12 13 L21 7"/>',
     'envelope-simple':  '<rect x="3" y="6" width="18" height="12" rx="1.5"/><path d="M3 7 L12 13 L21 7"/>',
     'handshake':        '<path d="M3 12 L7 8 L10 11 L7 14 Z M21 12 L17 8 L14 11 L17 14 Z M10 11 L14 11 L14 14 L10 14 Z M7 14 L7 17 L10 14"/>',
@@ -216,7 +233,7 @@
     'microphone':       '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11 A7 7 0 0 0 19 11 M12 18 L12 21"/>',
     'star':             '<path d="M12 3 L14.5 9 L21 9.5 L16 14 L17.5 20.5 L12 17 L6.5 20.5 L8 14 L3 9.5 L9.5 9 Z"/>',
 
-    // 概念/数据
+    // 概念/數據
     'target':           '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/>',
     'crosshair':        '<circle cx="12" cy="12" r="9"/><path d="M12 3 L12 7 M12 17 L12 21 M3 12 L7 12 M17 12 L21 12"/>',
     'dna':              '<path d="M6 4 C10 8 14 8 18 4 M6 20 C10 16 14 16 18 20 M6 8 C10 12 14 12 18 8 M6 16 C10 12 14 12 18 16"/>',
@@ -256,7 +273,73 @@
     return `<svg class="ti ti-${clean}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" ${attrs}>${path}</svg>`;
   }
 
-  /* ---------- 传播三件套：邀请码 + 分享文案 ---------- */
+  /* ---------- 多語言 i18n ---------- */
+  const LANGS = ['zh-HK', 'zh-CN', 'en'];
+  const LANG_LABEL = { 'zh-HK': '繁', 'zh-CN': '简', 'en': 'EN' };
+  let I18N = null;
+
+  function getLang() {
+    // 优先级：URL 参数 > localStorage > 浏览器语言 > 默认
+    const fromUrl = Cantonese_getQuery('lang');
+    if (fromUrl && LANGS.indexOf(fromUrl) >= 0) {
+      Store.set('cantonese_lang', fromUrl);
+      return fromUrl;
+    }
+    const saved = Store.get('cantonese_lang');
+    if (saved && LANGS.indexOf(saved) >= 0) return saved;
+    const nav = (navigator.language || 'zh-HK').toLowerCase();
+    if (nav.indexOf('en') === 0) return 'en';
+    if (nav.indexOf('zh-cn') === 0 || nav.indexOf('zh-sg') === 0) return 'zh-CN';
+    return 'zh-HK';
+  }
+  function Cantonese_getQuery(name) {
+    return new URLSearchParams(location.search).get(name);
+  }
+  function setLang(lang) {
+    Store.set('cantonese_lang', lang);
+  }
+  // 占位 — 实际 i18n 数据由 applyI18n 异步加载
+  function t(key, lang) {
+    lang = lang || getLang();
+    if (!I18N || !I18N.ui || !I18N.ui[key]) return key;
+    const entry = I18N.ui[key];
+    let s = entry[lang] || entry['zh-HK'] || entry['en'] || key;
+    // 简单占位替换 ${var}
+    if (arguments.length > 2) {
+      for (let i = 2; i < arguments.length; i++) {
+        s = s.replaceAll('$' + (i - 1), arguments[i]);
+      }
+    }
+    return s;
+  }
+  // 异步加载 i18n 字典 + 替换所有 [data-i18n] 占位
+  async function applyI18n() {
+    if (!I18N) {
+      try {
+        const res = await fetch('data/i18n.json', { cache: 'no-store' });
+        I18N = await res.json();
+      } catch (e) {
+        console.warn('[i18n] load fail', e);
+        return;
+      }
+    }
+    const lang = getLang();
+    document.documentElement.lang = (lang === 'zh-HK' || lang === 'zh-CN') ? 'zh-Hant' : 'en';
+    // 替换 [data-i18n]（textContent，保留 HTML 标签转义）
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.getAttribute('data-i18n');
+      const s = t(k, lang);
+      if (s && s !== k) el.textContent = s;
+    });
+    // 替换 [data-i18n-html]（innerHTML，保留 HTML 标签）
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const k = el.getAttribute('data-i18n-html');
+      const s = t(k, lang);
+      if (s && s !== k) el.innerHTML = s;
+    });
+  }
+
+  /* ---------- 傳播三件套：邀請碼 + 分享文案 ---------- */
   function genReferralCode() {
     return Math.random().toString(36).slice(2, 8).toUpperCase();
   }
@@ -271,32 +354,32 @@
 
   const SHARE_TEMPLATES = {
     xiaohongshu: (mbtiCode, mbtiType, ref) =>
-      `测了下粤语人格，超准！\n\n` +
+      `測了下粵語人格，超準！\n\n` +
       `你是 ${mbtiCode} · ${mbtiType.title}\n` +
       `${mbtiType.tagline}\n\n` +
-      `一分钟测出你的粤语人格 👇\n` +
+      `一分鐘測出你的粵語人格 👇\n` +
       `${location.origin}/test.html?ref=${ref}\n\n` +
-      `#粤语学习 #MBTI #自我认知 #学习博主`,
+      `#粵語學習 #MBTI #自我認知 #學習博主`,
 
     wechat: (mbtiCode, mbtiType, ref) =>
-      `我刚测了一个超准的粤语人格测试\n` +
-      `测出来是 ${mbtiCode} · ${mbtiType.title}\n` +
+      `我剛測了一個超準的粵語人格測試\n` +
+      `測出來是 ${mbtiCode} · ${mbtiType.title}\n` +
       `${mbtiType.tagline}\n\n` +
-      `你也来测下，看你是哪挂的 👇\n` +
+      `你也來測下，看你是哪掛的 👇\n` +
       `${location.origin}/test.html?ref=${ref}`,
 
     moments: (mbtiCode, mbtiType, ref) =>
-      `测了下我的粤语人格 → ${mbtiCode} ${mbtiType.title}\n` +
+      `測了下我的粵語人格 → ${mbtiCode} ${mbtiType.title}\n` +
       `${mbtiType.tagline}\n\n` +
-      `你也来测？\n` +
+      `你也來測？\n` +
       `${location.origin}/test.html?ref=${ref}`,
 
     simple: (mbtiCode, mbtiType, ref) =>
-      `测了下我的粤语人格：${mbtiCode} ${mbtiType.title}\n` +
+      `測了下我的粵語人格：${mbtiCode} ${mbtiType.title}\n` +
       `${location.origin}/test.html?ref=${ref}`,
   };
 
-  // 分享按钮点击后短暂反馈
+  // 分享按鈕點擊後短暫反饋
   function flashShare(btn, msg) {
     const orig = btn.textContent;
     btn.textContent = msg;
@@ -304,27 +387,68 @@
     setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 1500);
   }
 
-  /* ---------- Q&A 渲染（10 个常见问题，扁平）---------- */
+  /* ---------- 多語數據字段取值 ----------
+   * 数据文件（questions/partners/courses/labels）已统一为
+   *   { "zh-HK": ..., "zh-CN": ..., "en": ... }
+   * 结构。pick() 按当前 lang 取值，缺失时回退。
+   * 兼容：旧数据（纯字符串/数字）原样返回。
+   * 数组：逐项递归。
+   */
+  function pick(field, lang) {
+    lang = lang || getLang();
+    if (field == null) return '';
+    if (typeof field === 'string' || typeof field === 'number') return field;
+    if (Array.isArray(field)) {
+      return field.map(it => pick(it, lang));
+    }
+    if (typeof field === 'object') {
+      return field[lang] || field['zh-HK'] || field['zh-CN'] || field['en'] || '';
+    }
+    return '';
+  }
+
+  /* ---------- Q&A 渲染（10 個常見問題，三語 i18n）---------- */
   async function renderQA(container, data) {
     const filterEl = container.querySelector('#qa-filter');
     const listEl = container.querySelector('#qa-list');
+    const lang = getLang();
+    I18N = data;  // 注入字典
+
+    // 兼容两种数据源：i18n.json（多语）或 qa.json（单语）
+    const items = data.qa || data.items || [];
+
+    function pick(obj) {
+      if (!obj) return '';
+      if (typeof obj === 'string') return obj;
+      return obj[lang] || obj['zh-HK'] || obj['zh-CN'] || obj['en'] || '';
+    }
 
     function render(filterText) {
       const ft = (filterText || '').trim().toLowerCase();
-      const items = (data.items || []).filter(it =>
-        !ft || it.q.toLowerCase().includes(ft) || it.a.toLowerCase().includes(ft) || (it.tag || '').toLowerCase().includes(ft)
+      const matched = items.map(it => ({
+        q: pick(it.q),
+        a: pick(it.a),
+        tag: pick(it.tag) || '',
+      })).filter(it =>
+        !ft || it.q.toLowerCase().includes(ft) || it.a.toLowerCase().includes(ft) || it.tag.toLowerCase().includes(ft)
       );
-      if (!items.length) {
-        listEl.innerHTML = `<p class="muted text-sm center" style="padding: 24px;">没找到匹配「${filterText}」嘅问题</p>`;
+      if (!matched.length) {
+        const noMatch = lang === 'en' ? `No match for "${filterText}"`
+                       : lang === 'zh-CN' ? `没找到匹配「${filterText}」的问题`
+                       : `沒找到匹配「${filterText}」嘅問題`;
+        listEl.innerHTML = `<p class="muted text-sm center" style="padding: 24px;">${noMatch}</p>`;
         return;
       }
+      const countLabel = lang === 'en' ? `${matched.length} FAQ · click to expand`
+                       : lang === 'zh-CN' ? `共 ${matched.length} 个常见问题 · 点击展开`
+                       : `共 ${matched.length} 個常見問題 · 點擊展開`;
       listEl.innerHTML = `
-        <div class="text-sm muted" style="margin-bottom: 12px;">共 ${items.length} 个常见问题 · 点击展开</div>
+        <div class="text-sm muted" style="margin-bottom: 12px;">${countLabel}</div>
         <div class="stack">
-          ${items.map((it, i) => `
+          ${matched.map((it, i) => `
             <details class="qa-item">
               <summary class="qa-q">
-                <span class="qa-q-tag">${it.tag || ''}</span>
+                <span class="qa-q-tag">${it.tag}</span>
                 <span class="qa-q-text">${it.q}</span>
               </summary>
               <div class="qa-a">${it.a}</div>
@@ -340,7 +464,7 @@
     render('');
   }
 
-  /* 把页面上所有 data-icon 占位元素替换为内联 SVG */
+  /* 把頁面上所有 data-icon 佔位元素替換為內聯 SVG */
   function initIcons(root) {
     if (!root) root = document;
     const placeholders = root.querySelectorAll('[data-icon]');
@@ -358,5 +482,7 @@
     icon, initIcons, ICONS,
     getReferralCode, genReferralCode, SHARE_TEMPLATES, flashShare,
     renderQA,
+    t, applyI18n, getLang, setLang, LANGS,
+    pick,
   };
 })(window);
