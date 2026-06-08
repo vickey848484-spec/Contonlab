@@ -898,7 +898,7 @@
           "en": "Xiaohongshu"
         },
         "cssClass": "p-xhs",
-        "url": "https://www.xiaohongshu.com/search_result_ai?keyword=%25E5%258C%2585%25E5%25A6%2588VK%25E6%2595%2599%25E7%25B2%25A4%25E8%25AF%25AD&source=web_explore_feed"
+        "url": "https://xhslink.com/m/7LZfXHoiwAH"
       },
       {
         "icon": "抖音",
@@ -908,7 +908,7 @@
           "en": "Douyin"
         },
         "cssClass": "p-douyin",
-        "url": "https://www.douyin.com/search/%E5%8C%85%E5%A6%88VK%E6%95%99%E7%B2%A4%E8%AF%AD"
+        "url": "https://www.douyin.com/search/%E5%8C%85%E5%A6%88VK%E6%95%99%E7%B2%A4%E8%AF%AD?type=user"
       },
       {
         "icon": "視頻",
@@ -928,7 +928,7 @@
           "en": "Bilibili"
         },
         "cssClass": "p-bili",
-        "url": "https://search.bilibili.com/all?keyword=%E5%8C%85%E5%A6%88VK%E6%95%99%E7%B2%A4%E8%AF%AD"
+        "url": "https://space.bilibili.com/517071625"
       },
       {
         "icon": "快手",
@@ -938,7 +938,7 @@
           "en": "Kuaishou"
         },
         "cssClass": "p-kuaishou",
-        "url": "https://www.kuaishou.com/search/visionnew?searchKey=%E5%8C%85%E5%A6%88VK%E6%95%99%E7%B2%A4%E8%AF%AD"
+        "url": "https://www.kuaishou.com/profile/vickeyoo"
       },
       {
         "icon": "知乎",
@@ -948,7 +948,7 @@
           "en": "Zhihu"
         },
         "cssClass": "p-zhihu",
-        "url": "https://www.zhihu.com/search?type=people&q=%E5%8C%85%E5%A6%88VK%E6%95%99%E7%B2%A4%E8%AF%AD"
+        "url": "https://www.zhihu.com/people/69d85190397288ce33e6bd6fc7cd0cfa"
       },
       {
         "icon": "微博",
@@ -968,7 +968,7 @@
           "en": "Baijiahao"
         },
         "cssClass": "p-bjh",
-        "url": "https://baijiahao.baidu.com/"
+        "url": "https://author.baidu.com/home?context=%7B%22app_id%22%3A1684608928022403%7D&wfr=bjh"
       }
     ],
     "about.contact-test-sub": {
