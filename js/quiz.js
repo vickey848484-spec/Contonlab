@@ -85,8 +85,8 @@
       <div class="progress"><div class="progress-fill" style="width:${pct}%"></div></div>
       <div class="question-card">
         <span class="question-num">
-          ${isMbti ? '🧬 性格測試' : '📝 水平測試'} ·
-          第 ${idx + 1} / ${total} 題
+          ${Cantonese.t(isMbti ? 'test.mb-test' : 'test.lv-test')} ·
+          ${Cantonese.t('test.q-num', undefined, idx + 1, total)}
           ${q.category ? ` · ${Cantonese.pick(q.category)}` : ''}
         </span>
         <div class="question-text">${Cantonese.pick(q.question)}</div>
@@ -96,7 +96,7 @@
           `).join('')}
         </div>
         <div class="row mt-3" style="justify-content: space-between;">
-          ${idx > 0 ? '<button class="btn btn-ghost" id="prev">← 上一題</button>' : '<span></span>'}
+          ${idx > 0 ? `<button class="btn btn-ghost" id="prev">${Cantonese.t('test.prev')}</button>` : '<span></span>'}
           <span class="text-sm muted" id="progress-text">${idx + 1} / ${total}</span>
         </div>
       </div>
@@ -132,53 +132,54 @@
   }
 
   function renderUserForm(container) {
+    const T = Cantonese.t;
     container.innerHTML = `
       <div class="question-card">
-        <span class="question-num">📊 最後一步 · 算算你要學多久</span>
-        <div class="question-text">告訴我 4 件事，給你算個準的時長 👇</div>
+        <span class="question-num">${T('test.user-title')}</span>
+        <div class="question-text">${T('test.user-q')}</div>
 
         <div class="stack">
           <div class="field">
-            <label>你的年齡</label>
+            <label>${T('test.age')}</label>
             <select class="select" id="age">
-              <option value="u18">18 歲以下</option>
-              <option value="18-25" selected>18 - 25</option>
-              <option value="26-35">26 - 35</option>
-              <option value="36-50">36 - 50</option>
-              <option value="50+">50 以上</option>
+              <option value="u18">${T('test.opt.u18')}</option>
+              <option value="18-25" selected>${T('test.opt.18-25')}</option>
+              <option value="26-35">${T('test.opt.26-35')}</option>
+              <option value="36-50">${T('test.opt.36-50')}</option>
+              <option value="50+">${T('test.opt.50+')}</option>
             </select>
           </div>
 
           <div class="field">
-            <label>性別</label>
+            <label>${T('test.gender')}</label>
             <select class="select" id="gender">
-              <option value="f">女</option>
-              <option value="m">男</option>
-              <option value="o">其他 / 不透露</option>
+              <option value="f">${T('test.opt.f')}</option>
+              <option value="m">${T('test.opt.m')}</option>
+              <option value="o">${T('test.opt.o')}</option>
             </select>
           </div>
 
           <div class="field">
-            <label>地域（粵語接觸度）</label>
+            <label>${T('test.region')}</label>
             <select class="select" id="region">
-              <option value="native">粵語區（廣東/香港/澳門/廣西）</option>
-              <option value="exposed" selected>聽過粵語 / 看過港劇</option>
-              <option value="zero">完全沒接觸過</option>
+              <option value="native">${T('test.opt.native')}</option>
+              <option value="exposed" selected>${T('test.opt.exposed')}</option>
+              <option value="zero">${T('test.opt.zero')}</option>
             </select>
           </div>
 
           <div class="field">
-            <label>每日學習時長（你打算投入多少）</label>
+            <label>${T('test.minutes')}</label>
             <select class="select" id="minutes">
-              <option value="15">15 分鐘（佛系）</option>
-              <option value="30" selected>30 分鐘（標準）</option>
-              <option value="60">60 分鐘（認真）</option>
-              <option value="90">90 分鐘（卷王）</option>
+              <option value="15">${T('test.opt.15')}</option>
+              <option value="30" selected>${T('test.opt.30')}</option>
+              <option value="60">${T('test.opt.60')}</option>
+              <option value="90">${T('test.opt.90')}</option>
             </select>
           </div>
         </div>
 
-        <button class="btn btn-primary btn-block btn-lg mt-3" id="submit">看結果 🚀</button>
+        <button class="btn btn-primary btn-block btn-lg mt-3" id="submit">${T('test.btn-show')}</button>
       </div>
     `;
 
@@ -210,27 +211,30 @@
     });
   }
 
-  // 倒計時加載（5 秒內完成 → 跳轉）
+  // 倒計時加載（1.8 秒完成 → 跳轉；用户可点跳过）
   function showLoading(container, onDone) {
+    const T = Cantonese.t;
     const stages = [
-      { icon: 'magnifying-glass', text: '分析緊你嘅答案...',   duration: 900 },
-      { icon: 'calculator',        text: '揾你嘅學習時長...',   duration: 900 },
-      { icon: 'dna',               text: '生成 MBTI 人格...',   duration: 1000 },
-      { icon: 'funnel',            text: '匹配課程同語伴...',   duration: 900 },
-      { icon: 'rocket',            text: '準備好喇！',            duration: 600 },
+      { icon: 'magnifying-glass', text: T('test.stage-1'), duration: 380 },
+      { icon: 'calculator',        text: T('test.stage-2'), duration: 380 },
+      { icon: 'dna',               text: T('test.stage-3'), duration: 420 },
+      { icon: 'funnel',            text: T('test.stage-4'), duration: 380 },
+      { icon: 'rocket',            text: T('test.stage-5'), duration: 280 },
     ];
-    const total = stages.reduce((s, st) => s + st.duration, 0); // 4300ms
+    const total = stages.reduce((s, st) => s + st.duration, 0); // ~1840ms
+    const totalSec = (total / 1000).toFixed(1);
 
     container.innerHTML = `
       <div class="question-card" style="min-height: 380px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px 24px;">
         <div style="font-size: 80px; line-height: 1; margin-bottom: 24px; color: var(--blue);" id="loading-icon"></div>
-        <div class="display" style="font-size: 22px; margin-bottom: 32px; max-width: 320px; min-height: 30px;" id="loading-text">分析緊你嘅答案...</div>
+        <div class="display" style="font-size: 22px; margin-bottom: 32px; max-width: 320px; min-height: 30px;" id="loading-text">${T('test.stage-1')}</div>
         <div style="width: 100%; max-width: 320px;">
           <div class="progress"><div class="progress-fill" id="loading-bar" style="width: 0%"></div></div>
         </div>
         <div class="muted text-sm mt-2">
-          倒數 <span id="loading-eta">${(total/1000).toFixed(1)}</span> 秒
+          ${Cantonese.t('test.countdown', undefined, totalSec).replace(totalSec, `<span id="loading-eta">${totalSec}</span>`)}
         </div>
+        <button class="btn btn-ghost mt-3" id="loading-skip">${T('test.loading-skip')}</button>
       </div>
     `;
 
@@ -266,6 +270,10 @@
 
     setTimeout(tick, 50);
     confetti(document.body, 30);
+
+    // 跳过按钮：用户想立即看结果时点
+    const skipBtn = container.querySelector('#loading-skip');
+    if (skipBtn) skipBtn.addEventListener('click', () => onDone());
   }
 
   async function init(container) {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="8" height="630" fill="#0066ff"/>
+  <rect x="1192" y="0" width="8" height="630" fill="#ffd60a"/>
+  <text x="600" y="180" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="42" font-weight="700" fill="#999" text-anchor="middle" letter-spacing="6">識講粵語 · YUE TEST</text>
+  <text x="600" y="340" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="120" font-weight="900" fill="#ffd60a" text-anchor="middle">3 分鐘</text>
+  <text x="600" y="450" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="56" font-weight="900" fill="#fff" text-anchor="middle">測出你的粵語等級 + MBTI 風格人格</text>
+  <text x="600" y="540" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="32" font-weight="500" fill="#999" text-anchor="middle">A2-B1 → B2-C1 → C2+  ·  by Vickey 老師</text>
+  <rect x="500" y="80" width="200" height="60" fill="#ffd60a" rx="8"/>
+  <text x="600" y="120" font-family="-apple-system, sans-serif" font-size="32" font-weight="900" fill="#0a0a0a" text-anchor="middle">FREE</text>
+</svg>

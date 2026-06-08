@@ -1,0 +1,20 @@
+# robots.txt for 识讲粤语 · YUE 测
+# https://www.canton-ai.com/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://www.canton-ai.com/sitemap.xml
+
+# 常见爬虫
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /

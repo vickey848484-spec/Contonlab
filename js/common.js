@@ -337,6 +337,12 @@
       const s = t(k, lang);
       if (s && s !== k) el.innerHTML = s;
     });
+    // 替换 [data-i18n-placeholder]（input 占位符）
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const k = el.getAttribute('data-i18n-placeholder');
+      const s = t(k, lang);
+      if (s && s !== k) el.placeholder = s;
+    });
   }
 
   /* ---------- 傳播三件套：邀請碼 + 分享文案 ---------- */

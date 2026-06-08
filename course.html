@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<!-- SEO -->
+    <meta name="description" content="9 Cantonese courses, from pinyin basics to business Cantonese. Matched to your level + personality. 識講粵語 YUE Test.">
+    <meta name="keywords" content="cantonese course,learn cantonese,pinyin cantonese,business cantonese">
+    <meta name="author" content="Vickey · 識講粵語">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.canton-ai.com/course.html">
+    <link rel="alternate" hreflang="zh-HK" href="https://www.canton-ai.com/course.html?lang=zh-HK">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.canton-ai.com/course.html?lang=zh-CN">
+    <link rel="alternate" hreflang="en" href="https://www.canton-ai.com/course.html?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://www.canton-ai.com/course.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="識講粵語 · YUE Test">
+    <meta property="og:title" content="Find your Cantonese Course · 識講粵語">
+    <meta property="og:description" content="9 Cantonese courses, from pinyin basics to business Cantonese. Matched to your level + personality. 識講粵語 YUE Test.">
+    <meta property="og:url" content="https://www.canton-ai.com/course.html">
+    <meta property="og:image" content="https://www.canton-ai.com/images/og-image.svg">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Find your Cantonese Course · 識講粵語">
+    <meta name="twitter:description" content="9 Cantonese courses, from pinyin basics to business Cantonese. Matched to your level + personality. 識講粵語 YUE Test.">
+    <meta name="twitter:image" content="https://www.canton-ai.com/images/og-image.svg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>揾啱你嘅課 · 識講粵語</title>
@@ -14,28 +39,28 @@
   <main class="container container-wide">
     <section class="section">
       <div class="center mb-3">
-        <h1 class="display"><i data-icon="book-open"></i> 揾啱你嘅課</h1>
-        <p class="muted mt-1" id="subtitle">按你嘅等級 + 性格篩嘅</p>
+        <h1 class="display"><i data-icon="book-open"></i> <span data-i18n="course.title">揾啱你嘅課</span></h1>
+        <p class="muted mt-1" id="subtitle" data-i18n="course.subtitle-base">按你嘅等級 + 性格篩嘅</p>
       </div>
 
       <div class="card-flat mb-3 hide" id="no-result">
-        <p>你未測試過 <a href="test.html" style="color: var(--blue);">→ 去測一測</a></p>
+        <p data-i18n="result.no-result">你未測試過 <a href="test.html" style="color: var(--blue);" data-i18n="result.to-test">→ 去測一測</a></p>
       </div>
 
-      <h2 class="display" style="font-size: 22px;" id="sec1-title"><i data-icon="star"></i> 主推</h2>
+      <h2 class="display" style="font-size: 22px;" id="sec1-title"><i data-icon="star"></i> <span data-i18n="course.sec1">主推</span></h2>
       <div id="course-list" class="grid grid-3 mt-2 mb-3"></div>
 
-      <h2 class="display mt-3" style="font-size: 22px;" id="sec2-title">更多選擇</h2>
+      <h2 class="display mt-3" style="font-size: 22px;" id="sec2-title"><span data-i18n="course.sec2">更多選擇</span></h2>
       <div id="course-list-more" class="grid grid-3 mt-2"></div>
 
       <div class="center mt-3">
-        <a class="btn btn-ghost" href="result.html">← 睇返結果</a>
-        <a class="btn btn-primary" href="signup.html">下一步：留郵箱 →</a>
+        <a class="btn btn-ghost" href="result.html" data-i18n="btn.view-result">← 睇返結果</a>
+        <a class="btn btn-primary" href="signup.html" data-i18n="course.cta-next">下一步：留郵箱 →</a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">識講粵語 · 由 Vickey 老師主理</footer>
+  <footer class="footer" data-i18n="footer.main">識講粵語 · 由 Vickey 老師主理</footer>
 
   <script src="js/common.js?v=20260607b"></script>
   <script src="js/labeler.js?v=20260607b"></script>
@@ -64,6 +89,7 @@
 
       const matchTagsL = Cantonese.pick(matchTags) || [];
       const lang = Cantonese.getLang();
+      const T = Cantonese.t;
 
       const scored = courses.map(c => {
         let score = 0;
@@ -77,7 +103,7 @@
       const more = scored.slice(3);
 
       document.getElementById('subtitle').textContent =
-        `按你嘅「${level.name}」+ 「${mbtiCode}」篩嘅 ${scored.length} 門`;
+        T('course.subtitle-count', undefined, level.name, mbtiCode, scored.length);
 
       const badgeClass = level.key === 'entry' ? 'badge-blue'
                        : level.key === 'mid'   ? 'badge-pink'
@@ -97,7 +123,7 @@
               <div class="text-sm muted">${Cantonese.pick(c.type, lang)} · ${Cantonese.pick(c.duration, lang)}</div>
               <div class="bold" style="color: var(--pink); font-size: 18px;">${c.price}</div>
             </div>
-            <a class="btn btn-primary btn-block" href="${c.link}" target="_blank">查看課程 ${Cantonese.icon('arrow-right')}</a>
+            <a class="btn btn-primary btn-block" href="${c.link}" target="_blank">${T('course.view')} ${Cantonese.icon('arrow-right')}</a>
           </div>
         `;
       }

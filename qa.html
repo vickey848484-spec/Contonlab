@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<!-- SEO -->
+    <meta name="description" content="10 FAQ on learning Cantonese — time, method, tones, courses, refund. 識講粵語 YUE Test.">
+    <meta name="keywords" content="cantonese faq,cantonese questions,learn cantonese time,cantonese tones,cantonese course">
+    <meta name="author" content="Vickey · 識講粵語">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.canton-ai.com/qa.html">
+    <link rel="alternate" hreflang="zh-HK" href="https://www.canton-ai.com/qa.html?lang=zh-HK">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.canton-ai.com/qa.html?lang=zh-CN">
+    <link rel="alternate" hreflang="en" href="https://www.canton-ai.com/qa.html?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://www.canton-ai.com/qa.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="識講粵語 · YUE Test">
+    <meta property="og:title" content="Cantonese Learning Q&A · 識講粵語">
+    <meta property="og:description" content="10 FAQ on learning Cantonese — time, method, tones, courses, refund. 識講粵語 YUE Test.">
+    <meta property="og:url" content="https://www.canton-ai.com/qa.html">
+    <meta property="og:image" content="https://www.canton-ai.com/images/og-image.svg">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cantonese Learning Q&A · 識講粵語">
+    <meta name="twitter:description" content="10 FAQ on learning Cantonese — time, method, tones, courses, refund. 識講粵語 YUE Test.">
+    <meta name="twitter:image" content="https://www.canton-ai.com/images/og-image.svg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>粵語學習 Q&A · 識講粵語</title>
+  <title data-i18n="qa.title">粵語學習 Q&A · 識講粵語</title>
   <link rel="stylesheet" href="css/style.css?v=20260607b">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,24 +176,24 @@
   <main class="container">
     <section class="section">
       <div class="center mb-3">
-        <h1 class="display">學習 Q&A + 客服</h1>
-        <p class="muted mt-1">唔怕問題多，怕你唔問</p>
+        <h1 class="display" data-i18n="qa.title">學習 Q&A + 客服</h1>
+        <p class="muted mt-1" data-i18n="qa.subtitle">唔怕問題多，怕你唔問</p>
       </div>
 
-      <input class="qa-search" type="search" id="qa-filter" placeholder="搜問題：例如「發音」「多久」「退款」…">
+      <input class="qa-search" type="search" id="qa-filter" data-i18n-placeholder="qa.placeholder" placeholder="搜問題：例如「發音」「多久」「退款」…">
 
       <div id="qa-list"></div>
 
       <div class="contact-card">
-        <h2 class="display" style="font-size: 22px;">📞 聯繫客服</h2>
-        <p class="muted text-sm mt-1">3 種方式揾到 Vickey 老師</p>
+        <h2 class="display" style="font-size: 22px;" data-i18n="qa.contact-h2">📞 聯繫客服</h2>
+        <p class="muted text-sm mt-1" data-i18n="qa.contact-sub">3 種方式揾到 Vickey 老師</p>
 
         <div class="contact-row" id="contact-rows">
           <!-- JS 渲染 -->
         </div>
 
         <div class="mt-3" style="background: var(--bg-soft); padding: 16px; border-radius: 12px; border: 1px solid var(--border);">
-          <div class="text-sm bold"><i class="ph ph-clock"></i> 客服時間</div>
+          <div class="text-sm bold"><i class="ph ph-clock"></i> <span data-i18n="qa.contact-hours">客服時間</span></div>
           <p class="muted text-sm mt-1" id="contact-hours">—</p>
         </div>
       </div>
@@ -177,6 +202,34 @@
 
   <footer class="footer">識講粵語 · 由 Vickey 老師主理</footer>
 
+  <!-- FAQPage 结构化数据（Google 搜索 rich result） -->
+  <script>
+  (function() {
+    var lang = (new URLSearchParams(location.search).get('lang')) || localStorage.getItem('cantonese_lang') || 'zh-CN';
+    if (!['zh-HK','zh-CN','en'].indexOf(lang) === false) lang = 'zh-CN';
+    fetch('data/i18n.json').then(function(r){return r.json();}).then(function(d){
+      var list = (d.qa||[]).map(function(item){
+        return {
+          '@type': 'Question',
+          'name': item.q[lang] || item.q['zh-CN'] || '',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': (item.a[lang] || item.a['zh-CN'] || '').replace(/<[^>]+>/g,'')
+          }
+        };
+      });
+      var ld = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': list
+      };
+      var s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.head.appendChild(s);
+    }).catch(function(e){console.warn('[FAQ JSON-LD] fail', e);});
+  })();
+  </script>
   <script src="js/common.js?v=20260607b"></script>
   <script>
     Cantonese.initTheme();
