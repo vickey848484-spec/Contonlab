@@ -897,7 +897,8 @@
           "zh-CN": "小红书",
           "en": "Xiaohongshu"
         },
-        "cssClass": "p-xhs"
+        "cssClass": "p-xhs",
+        "url": "https://www.xiaohongshu.com/search_result_ai?keyword=%25E5%258C%2585%25E5%25A6%2588VK%25E6%2595%2599%25E7%25B2%25A4%25E8%25AF%25AD&source=web_explore_feed"
       },
       {
         "icon": "抖音",
@@ -906,7 +907,8 @@
           "zh-CN": "抖音",
           "en": "Douyin"
         },
-        "cssClass": "p-douyin"
+        "cssClass": "p-douyin",
+        "url": "https://www.douyin.com/search/%E5%8C%85%E5%A6%88VK%E6%95%99%E7%B2%A4%E8%AF%AD"
       },
       {
         "icon": "視頻",
@@ -915,7 +917,8 @@
           "zh-CN": "微信视频号",
           "en": "WeChat Channels"
         },
-        "cssClass": "p-shipinhao"
+        "cssClass": "p-shipinhao",
+        "url": "https://channels.weixin.qq.com/search?query=%E5%8C%85%E5%A6%88VK%E6%95%99%E7%B2%A4%E8%AF%AD"
       },
       {
         "icon": "B站",
@@ -924,7 +927,8 @@
           "zh-CN": "哔哩哔哩",
           "en": "Bilibili"
         },
-        "cssClass": "p-bili"
+        "cssClass": "p-bili",
+        "url": "https://search.bilibili.com/all?keyword=%E5%8C%85%E5%A6%88VK%E6%95%99%E7%B2%A4%E8%AF%AD"
       },
       {
         "icon": "快手",
@@ -933,7 +937,8 @@
           "zh-CN": "快手",
           "en": "Kuaishou"
         },
-        "cssClass": "p-kuaishou"
+        "cssClass": "p-kuaishou",
+        "url": "https://www.kuaishou.com/search/visionnew?searchKey=%E5%8C%85%E5%A6%88VK%E6%95%99%E7%B2%A4%E8%AF%AD"
       },
       {
         "icon": "知乎",
@@ -942,7 +947,8 @@
           "zh-CN": "知乎",
           "en": "Zhihu"
         },
-        "cssClass": "p-zhihu"
+        "cssClass": "p-zhihu",
+        "url": "https://www.zhihu.com/search?type=people&q=%E5%8C%85%E5%A6%88VK%E6%95%99%E7%B2%A4%E8%AF%AD"
       },
       {
         "icon": "微博",
@@ -951,7 +957,8 @@
           "zh-CN": "微博",
           "en": "Weibo"
         },
-        "cssClass": "p-weibo"
+        "cssClass": "p-weibo",
+        "url": "https://weibo.com/u/5241733587"
       },
       {
         "icon": "百家",
@@ -960,7 +967,8 @@
           "zh-CN": "百家号",
           "en": "Baijiahao"
         },
-        "cssClass": "p-bjh"
+        "cssClass": "p-bjh",
+        "url": "https://baijiahao.baidu.com/"
       }
     ],
     "about.contact-test-sub": {

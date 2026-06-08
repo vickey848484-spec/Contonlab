@@ -4,6 +4,7 @@
 (function (global) {
   'use strict';
 
+ /* common.js v20260608a */
   const KEYS = {
     quiz: 'cantonese_quiz_state',
     result: 'cantonese_result',
@@ -62,6 +63,26 @@
 
   function getQuery(name) {
     return new URLSearchParams(location.search).get(name);
+  }
+
+  /* ---------- 复制到剪贴板（兼容旧浏览器/非安全上下文）---------- */
+  async function copyToClipboard(text) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch (_) { /* fall through */ }
+    // Fallback: textarea + execCommand
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0;';
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (_) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
   }
 
   function confetti(target, count = 30) {
@@ -481,6 +502,11 @@
     });
   }
 
+  // 暴露原始 I18N 数据访问（用于 t() 不适用的结构化数据：数组、对象）
+  function getI18nRaw(key) {
+    return (I18N && I18N.ui && I18N.ui[key]) || null;
+  }
+
   global.Cantonese = {
     Store, LEVELS, loadJSON, getLevelByScore, getQuery,
     confetti, injectThemeToggle, injectTopbar, initTheme,
@@ -490,5 +516,7 @@
     renderQA,
     t, applyI18n, getLang, setLang, LANGS,
     pick,
+    getI18nRaw,
+    copyToClipboard,
   };
 })(window);

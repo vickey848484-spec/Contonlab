@@ -32,11 +32,11 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title data-i18n="about.realname">關於我 · 梁偉琦Vickey · 識講粵語</title>
-  <link rel="stylesheet" href="css/style.css?v=20260607b">
+  <link rel="stylesheet" href="css/style.css?v=20260608a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
-  <script src="js/analytics.js?v=20260607c" defer></script>
+  <script src="js/analytics.js?v=20260608a" defer></script>
   <style>
     .profile-hero { text-align: center; padding: 32px 0; }
     .profile-avatar {
@@ -335,7 +335,7 @@
       <!-- ============== 1. 頭部 ============== -->
       <div class="profile-hero">
         <div class="profile-avatar">
-          <img src="images/avatar.jpg?v=20260607b" alt="Vickey">
+          <img src="images/avatar.jpg?v=20260608a" alt="Vickey">
         </div>
         <div class="profile-name" data-i18n="about.realname">梁偉琦Vickey</div>
         <div class="profile-title" data-i18n="about.role">在線教育平台簽約粵語老師 · @包媽VK教粵語</div>
@@ -418,112 +418,114 @@
 
   <footer class="footer" data-i18n="footer.main">識講粵語 · 由梁偉琦Vickey 主理</footer>
 
-  <script src="js/common.js?v=20260607b"></script>
+  <script src="js/common.js?v=20260608a"></script>
   <script>
     Cantonese.initTheme();
     Cantonese.injectThemeToggle();
     Cantonese.injectTopbar('about');
     Cantonese.initIcons();
     Cantonese.initScrollReveal();
-    Cantonese.applyI18n();
 
-    // ---------- 渲染学员评价 ----------
-    (function renderTestimonials() {
-      const list = Cantonese.t('about.testimonials') || [];
-      const grid = document.getElementById('testimonial-grid');
-      if (!grid || !Array.isArray(list)) return;
-      grid.innerHTML = list.map(t => `
-        <div class="testimonial">
-          <p class="text">${Cantonese.pick(t.text)}</p>
-          <div class="author">
-            <div class="author-avatar">${t.avatar || '?'}</div>
-            <div class="author-info">
-              <div class="author-name">${t.author || ''}</div>
-              <div class="author-meta">${Cantonese.pick(t.meta)}</div>
-            </div>
-          </div>
-        </div>
-      `).join('');
-    })();
-
-    // ---------- 渲染课程总览（从 courses.json） ----------
-    (async function renderAboutCourses() {
-      try {
-        const { courses } = await Cantonese.loadJSON('data/courses.json');
-        const lang = Cantonese.getLang();
-        const groups = { entry: [], mid: [], high: [] };
-        courses.forEach(c => {
-          const lv = Cantonese.pick(c.level, lang);
-          if (groups[lv]) groups[lv].push(c);
-        });
-        const order = [
-          { key: 'entry', cls: 'badge-entry', icon: 'ph-target' },
-          { key: 'mid',   cls: 'badge-mid',   icon: 'ph-bowl-food' },
-          { key: 'high',  cls: 'badge-high',  icon: 'ph-flower-lotus' },
-        ];
-        const host = document.getElementById('about-course-groups');
-        host.innerHTML = order.map(g => {
-          const items = groups[g.key] || [];
-          if (!items.length) return '';
-          return `
-            <div class="course-group">
-              <div class="course-group-head">
-                <div class="course-group-title"><span class="badge ${g.cls}">${Cantonese.t('home.lv-badge-' + ({entry:'1',mid:'2',high:'3'}[g.key]))}</span></div>
-                <span class="muted text-sm">${items.length} ${Cantonese.t('about.courses-count-3').replace(/\d+\s*/, '').trim()}</span>
+    // 关键：applyI18n 是异步的，必须先 await，等 I18N 装好再渲染 4 块数据
+    Cantonese.applyI18n().then(() => {
+      // ---------- 渲染学员评价 ----------
+      (function renderTestimonials() {
+        // 用 getI18nRaw 取数组（t() 是给翻译字符串用的，对数组会返回 key 字符串本身）
+        const list = Cantonese.getI18nRaw('about.testimonials') || [];
+        const grid = document.getElementById('testimonial-grid');
+        if (!grid || !Array.isArray(list) || !list.length) return;
+        grid.innerHTML = list.map(t => `
+          <div class="testimonial">
+            <p class="text">${Cantonese.pick(t.text)}</p>
+            <div class="author">
+              <div class="author-avatar">${t.avatar || '?'}</div>
+              <div class="author-info">
+                <div class="author-name">${t.author || ''}</div>
+                <div class="author-meta">${Cantonese.pick(t.meta)}</div>
               </div>
-              <ul>
-                ${items.slice(0, 3).map(c => `
-                  <li>
-                    <div class="icon">${Cantonese.icon(c.icon || 'book-open')}</div>
-                    <div class="info">
-                      <div class="title">${Cantonese.pick(c.title, lang)}</div>
-                      <div class="meta">${Cantonese.pick(c.type, lang)} · ${Cantonese.pick(c.duration, lang)}</div>
-                    </div>
-                    <div class="price">${c.price}</div>
-                  </li>
-                `).join('')}
-              </ul>
             </div>
-          `;
-        }).join('');
-      } catch (e) {
-        console.warn('[about] courses render fail', e);
-      }
-    })();
-
-    // ---------- 渲染学习方法论 ----------
-    (function renderMethods() {
-      const list = Cantonese.t('about.methods') || [];
-      const host = document.getElementById('about-methods');
-      if (!host || !Array.isArray(list)) return;
-      host.innerHTML = list.map((m, i) => `
-        <div class="method-card">
-          <div class="num">${i + 1}</div>
-          <div class="info">
-            <div class="title">${Cantonese.pick(m.title)}</div>
-            <div class="desc" data-i18n-html="">${Cantonese.pick(m.desc)}</div>
           </div>
-        </div>
-      `).join('');
-    })();
+        `).join('');
+      })();
 
-    // ---------- 渲染平台 ----------
-    (function renderPlatforms() {
-      const list = Cantonese.t('about.platforms') || [];
-      const handle = Cantonese.t('about.handle');
-      const host = document.getElementById('about-platforms');
-      if (!host || !Array.isArray(list)) return;
-      host.innerHTML = list.map(p => `
-        <a class="platform-card ${p.cssClass || ''}" href="#" onclick="return false;">
-          <div class="icon">${p.icon || ''}</div>
-          <div class="info">
-            <div class="name">${Cantonese.pick(p.name)}</div>
-            <div class="id">${handle}</div>
+      // ---------- 渲染课程总览（从 courses.json） ----------
+      (async function renderAboutCourses() {
+        try {
+          const { courses } = await Cantonese.loadJSON('data/courses.json');
+          const groups = { entry: [], mid: [], high: [] };
+          courses.forEach(c => {
+            if (groups[c.levelKey]) groups[c.levelKey].push(c);
+          });
+          const order = [
+            { key: 'entry', cls: 'badge-entry' },
+            { key: 'mid',   cls: 'badge-mid'   },
+            { key: 'high',  cls: 'badge-high'  },
+          ];
+          const lang = Cantonese.getLang();
+          const host = document.getElementById('about-course-groups');
+          host.innerHTML = order.map(g => {
+            const items = groups[g.key] || [];
+            if (!items.length) return '';
+            return `
+              <div class="course-group">
+                <div class="course-group-head">
+                  <div class="course-group-title"><span class="badge ${g.cls}">${Cantonese.t('home.lv-badge-' + ({entry:'1',mid:'2',high:'3'}[g.key]))}</span></div>
+                  <span class="muted text-sm">${items.length} ${Cantonese.t('about.courses-count-3').replace(/\d+\s*/, '').trim()}</span>
+                </div>
+                <ul>
+                  ${items.slice(0, 3).map(c => `
+                    <li>
+                      <div class="icon">${Cantonese.icon(c.icon || 'book-open')}</div>
+                      <div class="info">
+                        <div class="title">${Cantonese.pick(c.title, lang)}</div>
+                        <div class="meta">${Cantonese.pick(c.type, lang)} · ${Cantonese.pick(c.duration, lang)}</div>
+                      </div>
+                      <div class="price">${c.price}</div>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+            `;
+          }).join('');
+        } catch (e) {
+          console.warn('[about] courses render fail', e);
+        }
+      })();
+
+      // ---------- 渲染学习方法论 ----------
+      (function renderMethods() {
+        const list = Cantonese.getI18nRaw('about.methods') || [];
+        const host = document.getElementById('about-methods');
+        if (!host || !Array.isArray(list) || !list.length) return;
+        host.innerHTML = list.map((m, i) => `
+          <div class="method-card">
+            <div class="num">${i + 1}</div>
+            <div class="info">
+              <div class="title">${Cantonese.pick(m.title)}</div>
+              <div class="desc">${Cantonese.pick(m.desc)}</div>
+            </div>
           </div>
-          <div class="arrow">→</div>
-        </a>
-      `).join('');
-    })();
+        `).join('');
+      })();
+
+      // ---------- 渲染平台 ----------
+      (function renderPlatforms() {
+        const list = Cantonese.getI18nRaw('about.platforms') || [];
+        const handle = Cantonese.t('about.handle');
+        const host = document.getElementById('about-platforms');
+        if (!host || !Array.isArray(list) || !list.length) return;
+        host.innerHTML = list.map(p => `
+          <a class="platform-card ${p.cssClass || ''}" href="${p.url || '#'}" target="_blank" rel="noopener">
+            <div class="icon">${p.icon || ''}</div>
+            <div class="info">
+              <div class="name">${Cantonese.pick(p.name)}</div>
+              <div class="id">${handle}</div>
+            </div>
+            <div class="arrow">→</div>
+          </a>
+        `).join('');
+      })();
+    }).catch(err => console.warn('[about] i18n load fail', err));
 
     // ---------- 复制微信号 ----------
     document.querySelectorAll('[data-copy]').forEach(el => {

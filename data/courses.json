@@ -13,9 +13,18 @@
         "en": "Beginner"
       },
       "tags": {
-        "zh-HK": ["速成", "學院"],
-        "zh-CN": ["速成", "学院"],
-        "en": ["Speed", "Academic"]
+        "zh-HK": [
+          "速成",
+          "學院"
+        ],
+        "zh-CN": [
+          "速成",
+          "学院"
+        ],
+        "en": [
+          "Speed",
+          "Academic"
+        ]
       },
       "type": {
         "zh-HK": "影片課",
@@ -34,7 +43,8 @@
         "en": "Pronunciation lives or dies here. 9 tones, 6 finals + a full pinyin chart — all in one course."
       },
       "link": "#",
-      "icon": "ph-target"
+      "icon": "ph-target",
+      "levelKey": "entry"
     },
     {
       "id": "c2",
@@ -49,9 +59,18 @@
         "en": "Beginner"
       },
       "tags": {
-        "zh-HK": ["聽講", "學院"],
-        "zh-CN": ["听讲", "学院"],
-        "en": ["Listening", "Academic"]
+        "zh-HK": [
+          "聽講",
+          "學院"
+        ],
+        "zh-CN": [
+          "听讲",
+          "学院"
+        ],
+        "en": [
+          "Listening",
+          "Academic"
+        ]
       },
       "type": {
         "zh-HK": "影片課",
@@ -70,7 +89,8 @@
         "en": "100 high-frequency life words + scene phrases — usable the moment you land in HK or Guangzhou."
       },
       "link": "#",
-      "icon": "ph-bowl-food"
+      "icon": "ph-bowl-food",
+      "levelKey": "entry"
     },
     {
       "id": "c3",
@@ -85,9 +105,18 @@
         "en": "Beginner"
       },
       "tags": {
-        "zh-HK": ["傾偈", "社交"],
-        "zh-CN": ["倾偈", "社交"],
-        "en": ["Chatting", "Social"]
+        "zh-HK": [
+          "傾偈",
+          "社交"
+        ],
+        "zh-CN": [
+          "倾偈",
+          "社交"
+        ],
+        "en": [
+          "Chatting",
+          "Social"
+        ]
       },
       "type": {
         "zh-HK": "影片課",
@@ -106,7 +135,8 @@
         "en": "Ice-breaking with strangers / work intros / WeChat hellos — 30 plug-and-play sentence templates."
       },
       "link": "#",
-      "icon": "ph-handshake"
+      "icon": "ph-handshake",
+      "levelKey": "entry"
     },
     {
       "id": "c4",
@@ -121,9 +151,18 @@
         "en": "Intermediate"
       },
       "tags": {
-        "zh-HK": ["傾偈", "社交"],
-        "zh-CN": ["倾偈", "社交"],
-        "en": ["Chatting", "Social"]
+        "zh-HK": [
+          "傾偈",
+          "社交"
+        ],
+        "zh-CN": [
+          "倾偈",
+          "社交"
+        ],
+        "en": [
+          "Chatting",
+          "Social"
+        ]
       },
       "type": {
         "zh-HK": "影片課",
@@ -142,7 +181,8 @@
         "en": "50 real-life scenarios, 5 min each — finish a lesson, use it that day."
       },
       "link": "#",
-      "icon": "ph-train"
+      "icon": "ph-train",
+      "levelKey": "mid"
     },
     {
       "id": "c5",
@@ -157,9 +197,18 @@
         "en": "Intermediate"
       },
       "tags": {
-        "zh-HK": ["速成", "野生"],
-        "zh-CN": ["速成", "野生"],
-        "en": ["Speed", "Wild"]
+        "zh-HK": [
+          "速成",
+          "野生"
+        ],
+        "zh-CN": [
+          "速成",
+          "野生"
+        ],
+        "en": [
+          "Speed",
+          "Wild"
+        ]
       },
       "type": {
         "zh-HK": "影片課",
@@ -178,7 +227,8 @@
         "en": "200+ slang and idioms locals actually use daily — from 「执生」 to 「食字」, all covered."
       },
       "link": "#",
-      "icon": "ph-smiley"
+      "icon": "ph-smiley",
+      "levelKey": "mid"
     },
     {
       "id": "c6",
@@ -193,9 +243,18 @@
         "en": "Intermediate"
       },
       "tags": {
-        "zh-HK": ["聽講", "野生"],
-        "zh-CN": ["听讲", "野生"],
-        "en": ["Listening", "Wild"]
+        "zh-HK": [
+          "聽講",
+          "野生"
+        ],
+        "zh-CN": [
+          "听讲",
+          "野生"
+        ],
+        "en": [
+          "Listening",
+          "Wild"
+        ]
       },
       "type": {
         "zh-HK": "影片課",
@@ -214,7 +273,8 @@
         "en": "Line-by-line breakdown of classic lines from 《使徒行者》 and 《难兄难弟》 — ditch the subtitles for good."
       },
       "link": "#",
-      "icon": "ph-television"
+      "icon": "ph-television",
+      "levelKey": "mid"
     },
     {
       "id": "c7",
@@ -229,9 +289,18 @@
         "en": "Advanced"
       },
       "tags": {
-        "zh-HK": ["學院", "獨狼"],
-        "zh-CN": ["学院", "独狼"],
-        "en": ["Academic", "Solo"]
+        "zh-HK": [
+          "學院",
+          "獨狼"
+        ],
+        "zh-CN": [
+          "学院",
+          "独狼"
+        ],
+        "en": [
+          "Academic",
+          "Solo"
+        ]
       },
       "type": {
         "zh-HK": "1 對 1 直播",
@@ -250,7 +319,8 @@
         "en": "Client reception / meeting pitches / formal emails — all covered, with 1-on-1 teacher correction."
       },
       "link": "#",
-      "icon": "ph-briefcase"
+      "icon": "ph-briefcase",
+      "levelKey": "high"
     },
     {
       "id": "c8",
@@ -265,9 +335,18 @@
         "en": "Advanced"
       },
       "tags": {
-        "zh-HK": ["學院", "野生"],
-        "zh-CN": ["学院", "野生"],
-        "en": ["Academic", "Wild"]
+        "zh-HK": [
+          "學院",
+          "野生"
+        ],
+        "zh-CN": [
+          "学院",
+          "野生"
+        ],
+        "en": [
+          "Academic",
+          "Wild"
+        ]
       },
       "type": {
         "zh-HK": "影片課",
@@ -286,7 +365,8 @@
         "en": "Classical Cantonese poetry + modern Cantopop lyric appreciation — culture depth maxed out."
       },
       "link": "#",
-      "icon": "ph-book-open"
+      "icon": "ph-book-open",
+      "levelKey": "high"
     },
     {
       "id": "c9",
@@ -301,9 +381,18 @@
         "en": "Advanced"
       },
       "tags": {
-        "zh-HK": ["野生", "社交"],
-        "zh-CN": ["野生", "社交"],
-        "en": ["Wild", "Social"]
+        "zh-HK": [
+          "野生",
+          "社交"
+        ],
+        "zh-CN": [
+          "野生",
+          "社交"
+        ],
+        "en": [
+          "Wild",
+          "Social"
+        ]
       },
       "type": {
         "zh-HK": "社群共學",
@@ -322,7 +411,8 @@
         "en": "Tea houses / temples / wedding & funeral customs — chat culture with locals without faking it."
       },
       "link": "#",
-      "icon": "ph-flower-lotus"
+      "icon": "ph-flower-lotus",
+      "levelKey": "high"
     }
   ]
 }
