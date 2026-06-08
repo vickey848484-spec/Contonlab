@@ -176,6 +176,12 @@
       Cantonese.initIcons();
       Cantonese.initScrollReveal();
 
+      // 关键：把 T 提到 try 块外，避免 catch 块里 T 未定义
+      const T = Cantonese.t;
+      // catch 块里用的错误兜底文案（用硬编码防 i18n 失败时也显示）
+      const FALLBACK_ERROR_TITLE = 'Something went wrong';
+      const FALLBACK_ERROR_CTA = 'Retake the test';
+
       try {
         const result = Cantonese.Store.get(Cantonese.Store.KEYS.result);
         if (!result || !result.level) {
@@ -214,48 +220,53 @@
             matchTags: []
           };
         }
-
-        const T = Cantonese.t;
-        const badge = document.getElementById('level-badge');
-        badge.textContent = level.short;
-        badge.classList.add(level.cls);
-        document.getElementById('level-name').textContent = level.name;
-        document.getElementById('level-score').textContent =
-          T('result.score', undefined, levelTotal, levelScore);
-
-        document.getElementById('mbti-emoji').innerHTML = Cantonese.icon(mbtiType.icon || 'sparkle');
-        document.getElementById('mbti-code').textContent = mbtiCode;
-        document.getElementById('mbti-title').textContent = Cantonese.pick(mbtiType.title);
-        document.getElementById('mbti-tagline').textContent = Cantonese.pick(mbtiType.tagline);
-        document.getElementById('mbti-desc').textContent = Cantonese.pick(mbtiType.desc);
-        document.getElementById('mbti-advice').textContent = Cantonese.pick(mbtiType.advice);
-
-        const dimsHost = document.getElementById('mbti-dims');
-        const dims = Labeller.dimensionsOf(mbtiCode);
-        dimsHost.innerHTML = dims.map(d =>
-          `<span class="tag tag-blue">${d.label}</span>`
-        ).join('');
-
-        const t = Calc.estimate(user);
-        document.getElementById('daily-mins').textContent = user.minutes;
-        const lvlMap = { entry: 't-entry', mid: 't-mid', high: 't-high' };
-        const bMap = { mid: 'b-mid', high: 'b-high' };
-        const achieved = T('result.achieved');
-        ['entry','mid','high'].forEach(k => {
-          document.getElementById(lvlMap[k]).textContent =
-            T('result.timeline-months', undefined, t[k].months, t[k].days);
-        });
-        if (level.key === 'mid') {
-          document.getElementById(bMap.mid).textContent = achieved;
-          document.getElementById(bMap.mid).classList.remove('badge');
-          document.getElementById(bMap.mid).classList.add('badge', 'badge-blue');
+        // 关键：每个 textContent 赋值独立 try/catch，任何单点失败不影响其他
+        function safe(id, fn) {
+          try { const el = document.getElementById(id); if (el) fn(el); }
+          catch (e) { console.warn('[result] skip ' + id + ':', e.message); }
         }
-        if (level.key === 'high') {
-          document.getElementById(bMap.mid).textContent = achieved;
-          document.getElementById(bMap.high).textContent = achieved;
-          document.getElementById(bMap.mid).className = 'badge badge-blue';
-          document.getElementById(bMap.high).className = 'badge badge-blue';
-        }
+        safe('level-badge', el => { el.textContent = (level && level.short) || '—'; el.classList.add((level && level.cls) || 'level-entry'); });
+        safe('level-name', el => { el.textContent = (level && level.name) || '—'; });
+        safe('level-score', el => { el.textContent = T('result.score', undefined, levelTotal, levelScore); });
+        safe('mbti-emoji', el => { el.innerHTML = Cantonese.icon(mbtiType.icon || 'sparkle'); });
+        safe('mbti-code', el => { el.textContent = mbtiCode; });
+        safe('mbti-title', el => { el.textContent = Cantonese.pick(mbtiType.title); });
+        safe('mbti-tagline', el => { el.textContent = Cantonese.pick(mbtiType.tagline); });
+        safe('mbti-desc', el => { el.textContent = Cantonese.pick(mbtiType.desc); });
+        safe('mbti-advice', el => { el.textContent = Cantonese.pick(mbtiType.advice); });
+
+        try {
+          const dimsHost = document.getElementById('mbti-dims');
+          const dims = Labeller.dimensionsOf(mbtiCode) || [];
+          if (dimsHost) dimsHost.innerHTML = dims.map(d =>
+            `<span class="tag tag-blue">${(d && d.label) || ''}</span>`
+          ).join('');
+        } catch (e) { console.warn('[result] dims skip:', e.message); }
+
+        try {
+          const t = Calc.estimate(user);
+          const lvlMap = { entry: 't-entry', mid: 't-mid', high: 't-high' };
+          ['entry','mid','high'].forEach(k => {
+            const el = document.getElementById(lvlMap[k]);
+            if (el && t && t[k]) el.textContent = T('result.timeline-months', undefined, t[k].months, t[k].days);
+          });
+          const dailyEl = document.getElementById('daily-mins');
+          if (dailyEl && user) dailyEl.textContent = user.minutes;
+        } catch (e) { console.warn('[result] timeline skip:', e.message); }
+        try {
+          const achieved = T('result.achieved');
+          const bMap = { mid: 'b-mid', high: 'b-high' };
+          if (level && level.key === 'mid') {
+            const el = document.getElementById(bMap.mid);
+            if (el) { el.textContent = achieved; el.classList.remove('badge'); el.classList.add('badge', 'badge-blue'); }
+          }
+          if (level && level.key === 'high') {
+            const elMid = document.getElementById(bMap.mid);
+            const elHigh = document.getElementById(bMap.high);
+            if (elMid) { elMid.textContent = achieved; elMid.className = 'badge badge-blue'; }
+            if (elHigh) { elHigh.textContent = achieved; elHigh.className = 'badge badge-blue'; }
+          }
+        } catch (e) { console.warn('[result] badges skip:', e.message); }
 
         // ---------- 答錯題回顧 ----------
         try {
@@ -348,12 +359,21 @@
         Cantonese.confetti(document.body, 50);
       } catch (e) {
         console.error('[result] error:', e);
-        const errorTitle = T('result.error-title');
-        const errorCta = T('result.error-cta');
-        document.getElementById('loading').innerHTML =
-          `<div class="center"><p style="color: var(--pink); margin-bottom: 8px;">${errorTitle}</p>
-           <p class="text-sm muted" style="margin-bottom: 16px;">${e.message}</p>
-           <a class="btn btn-ghost" href="test.html">${errorCta}</a></div>`;
+        // 关键：catch 自己不能崩。用 Cantonese.t 直接调（不在 try 块里定义 T），且 t() 失败时 fallback 到硬编码
+        let errorTitle = FALLBACK_ERROR_TITLE, errorCta = FALLBACK_ERROR_CTA, errMsg = (e && e.message) || String(e);
+        try { errorTitle = Cantonese.t('result.error-title') || errorTitle; } catch (_) {}
+        try { errorCta = Cantonese.t('result.error-cta') || errorCta; } catch (_) {}
+        try {
+          document.getElementById('loading').innerHTML =
+            `<div class="center"><p style="color: var(--pink); margin-bottom: 8px;">${errorTitle}</p>
+             <p class="text-sm muted" style="margin-bottom: 16px;">${errMsg}</p>
+             <a class="btn btn-ghost" href="test.html">${errorCta}</a></div>`;
+        } catch (e2) {
+          // 连 catch 都失败 — 直接 hide loading + 显示最简错误
+          console.error('[result] catch itself failed', e2);
+          try { document.getElementById('loading').classList.add('hide'); } catch (_) {}
+          try { document.getElementById('result-wrap').classList.remove('hide'); } catch (_) {}
+        }
       }
     })();
   </script>

@@ -97,9 +97,20 @@
           await Quiz.init(container);
         } catch (e) {
           console.error('[test] Quiz.init fail', e);
-          container.innerHTML = '<div class="center mt-3"><p style="color: var(--pink);">' +
-            Cantonese.t('result.error-title') + '</p><p class="text-sm muted" style="margin: 8px 0; font-family: monospace; font-size: 12px;">' + (e && e.message || e) + '</p>' +
-            '<button class="btn btn-primary" onclick="localStorage.removeItem(\'cantonese_quiz\'); location.reload();">↻ Reset & Retry</button></p></div>';
+          // 关键：catch 不能崩。用硬编码 fallback，且 t() 失败时也兜底
+          let errorTitle = 'Something went wrong';
+          let errorCta = '↻ Reset & Retry';
+          let errMsg = (e && e.message) || String(e);
+          try { errorTitle = Cantonese.t('result.error-title') || errorTitle; } catch (_) {}
+          try { errorCta = Cantonese.t('result.error-cta') || errorCta; } catch (_) {}
+          try {
+            container.innerHTML = '<div class="center mt-3"><p style="color: var(--pink);">' +
+              errorTitle + '</p><p class="text-sm muted" style="margin: 8px 0; font-family: monospace; font-size: 12px;">' + errMsg + '</p>' +
+              '<button class="btn btn-primary" onclick="localStorage.removeItem(\'cantonese_quiz\'); location.reload();">' + errorCta + '</button></p></div>';
+          } catch (e2) {
+            console.error('[test] catch failed', e2);
+            container.textContent = errorTitle + ' — ' + errMsg;
+          }
         }
       }
     })();
