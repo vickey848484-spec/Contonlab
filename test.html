@@ -38,12 +38,56 @@
 <body>
   <main class="container">
     <section class="section">
+      <a href="index.html" class="back-home" style="
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        background: var(--yellow);
+        color: #0a0a0a;
+        border-radius: 999px;
+        font-weight: 900;
+        font-size: 14px;
+        text-decoration: none;
+        margin-bottom: 16px;
+      ">← 返回首頁</a>
+      <h1 class="display center" style="font-size: 28px; margin-bottom: 24px;" data-i18n="test.h1">開始測試 · 識講粵語</h1>
+      <p class="muted center text-sm" style="margin-bottom: 24px;" data-i18n="test.h1-sub">3 分鐘 14 題 · 測出你的粵語等級 + MBTI 風格人格 + 學習時長</p>
       <div id="quiz-container"></div>
+      <p class="muted center text-sm" style="margin-top: 32px;">
+        <span data-i18n="test.pre-qa">仲有問題？睇</span>
+        <a href="qa.html" style="color: var(--yellow); font-weight: 700;" data-i18n="test.pre-qa-link">常見問題 Q&A</a>
+      </p>
     </section>
   </main>
 
-  <script src="js/common.js?v=20260607b"></script>
+  <script src="js/common.js?v=20260608c"></script>
   <script src="js/quiz.js?v=20260607b"></script>
+
+  <!-- Quiz schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": "識講粵語水平測試 + MBTI 風格人格",
+    "description": "3 分鐘 14 道題，測出你的粵語水平等級（入門/進階/高階）+ 16 型 MBTI 風格人格 + 精確學習時長預測。",
+    "inLanguage": ["zh-HK", "zh-CN", "en"],
+    "numberOfQuestions": 14,
+    "about": [
+      { "@type": "Thing", "name": "Cantonese language proficiency" },
+      { "@type": "Thing", "name": "粵語水平" },
+      { "@type": "Thing", "name": "Language learning personality" }
+    ],
+    "educationalLevel": "All levels (A1 to C2)",
+    "timeRequired": "PT3M",
+    "isAccessibleForFree": true,
+    "provider": {
+      "@type": "Person",
+      "name": "梁偉琦 Vickey",
+      "url": "https://www.canton-ai.com/about.html"
+    }
+  }
+  </script>
   <script>
     (async function () {
       // 1. 立即显示 loading 状态，避免空白页

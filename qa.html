@@ -230,7 +230,22 @@
     }).catch(function(e){console.warn('[FAQ JSON-LD] fail', e);});
   })();
   </script>
-  <script src="js/common.js?v=20260607b"></script>
+  <script src="js/common.js?v=20260608c"></script>
+
+  <!-- FAQPage 静态 fallback（动态 i18n 加载失败时仍可被搜索引擎读取）-->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "學粵語要學幾耐？", "acceptedAnswer": { "@type": "Answer", "text": "按 FSI 標準，中文被列為「超難」語言，母語英語者達到 B1 需約 2200 小時。本網站用年齡/地域/每日學習時長算精確值。" } },
+      { "@type": "Question", "name": "粵語 9 聲 6 調是什麼？", "acceptedAnswer": { "@type": "Answer", "text": "粵語有 9 個聲調（普通話只有 4 個），6 個主要韻尾。入聲（-p/-t/-k）也是粵語特色。初學者先掌握 6 調基本框架。" } },
+      { "@type": "Question", "name": "零基礎可以學嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。入門課程從拼音開始，3 個月內能進行日常自我介紹和簡單對話。建議每天 30 分鐘、每週 25 天。" } },
+      { "@type": "Question", "name": "課程有退款嗎？", "acceptedAnswer": { "@type": "Answer", "text": "7 天內不滿意全額退款，無需理由，私訊微信即可。" } },
+      { "@type": "Question", "name": "1v1 和視頻課有什麼區別？", "acceptedAnswer": { "@type": "Answer", "text": "視頻課是預錄，隨時學。1v1 直播客製化，適合商務 / 發音矯正 / 短期衝刺需求。" } }
+    ]
+  }
+  </script>
   <script>
     Cantonese.initTheme();
     Cantonese.injectThemeToggle();

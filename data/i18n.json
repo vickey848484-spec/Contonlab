@@ -51,6 +51,26 @@
       "zh-CN": "识讲粤语 · 由梁伟琦Vickey 主理",
       "en": "Cantonese Mastery · by Liang Weiqi Vickey"
     },
+    "result.more-from": {
+      "zh-HK": "繼續探索：",
+      "zh-CN": "继续探索：",
+      "en": "Keep going:"
+    },
+    "result.nav-about": {
+      "zh-HK": "👩‍🏫 認識 Vickey",
+      "zh-CN": "👩‍🏫 认识 Vickey",
+      "en": "👩‍🏫 Meet Vickey"
+    },
+    "result.nav-qa": {
+      "zh-HK": "❓ 常見問題",
+      "zh-CN": "❓ 常见问题",
+      "en": "❓ FAQ"
+    },
+    "result.nav-course": {
+      "zh-HK": "📚 揀啱我嘅課",
+      "zh-CN": "📚 选我的课",
+      "en": "📚 Pick my course"
+    },
     "btn.start": {
       "zh-HK": "開始測試",
       "zh-CN": "开始测试",
@@ -271,6 +291,41 @@
       "zh-CN": "开始测试 →",
       "en": "Start now →"
     },
+    "home.more-title": {
+      "zh-HK": "更多資源",
+      "zh-CN": "更多资源",
+      "en": "More resources"
+    },
+    "home.more-about-h": {
+      "zh-HK": "關於 Vickey",
+      "zh-CN": "关于 Vickey",
+      "en": "About Vickey"
+    },
+    "home.more-about-sub": {
+      "zh-HK": "16+ 年教學 · 全網 25 萬粉絲",
+      "zh-CN": "16+ 年教学 · 全网 25 万粉丝",
+      "en": "16+ yrs teaching · 250K followers"
+    },
+    "home.more-qa-h": {
+      "zh-HK": "常見問題",
+      "zh-CN": "常见问题",
+      "en": "FAQ"
+    },
+    "home.more-qa-sub": {
+      "zh-HK": "學多久 / 9 聲 6 調 / 退款",
+      "zh-CN": "学多久 / 9 声 6 调 / 退款",
+      "en": "Time / Tones / Refund"
+    },
+    "home.more-research-h": {
+      "zh-HK": "學習時長研究",
+      "zh-CN": "学习时长研究",
+      "en": "Study-time research"
+    },
+    "home.more-research-sub": {
+      "zh-HK": "FSI / ACTFL / SLA 深度分析",
+      "zh-CN": "FSI / ACTFL / SLA 深度分析",
+      "en": "FSI / ACTFL / SLA deep-dive"
+    },
     "test.loading": {
       "zh-HK": "算緊你嘅結果...",
       "zh-CN": "算紧你嘅结果...",
@@ -445,6 +500,26 @@
       "zh-HK": "📝 水平測試",
       "zh-CN": "📝 水平测试",
       "en": "📝 Level Test"
+    },
+    "test.h1": {
+      "zh-HK": "開始測試 · 識講粵語",
+      "zh-CN": "开始测试 · 识讲粤语",
+      "en": "Take the Test · Cantonese Mastery"
+    },
+    "test.h1-sub": {
+      "zh-HK": "3 分鐘 14 題 · 測出你的粵語等級 + MBTI 風格人格 + 學習時長",
+      "zh-CN": "3 分钟 14 题 · 测出你的粤语等级 + MBTI 风格人格 + 学习时长",
+      "en": "3 min · 14 questions · find your Cantonese level + MBTI personality + study timeline"
+    },
+    "test.pre-qa": {
+      "zh-HK": "仲有問題？睇",
+      "zh-CN": "还有问题？看",
+      "en": "Got questions? See"
+    },
+    "test.pre-qa-link": {
+      "zh-HK": "常見問題 Q&A",
+      "zh-CN": "常见问题 Q&A",
+      "en": "FAQ"
     },
     "test.prev": {
       "zh-HK": "← 上一題",
